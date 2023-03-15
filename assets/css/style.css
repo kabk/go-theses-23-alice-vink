@@ -49,9 +49,9 @@ input,select{vertical-align:middle}
   align-items: center;
   list-style: none;
   position: fixed;
-  background-color: #ffffff;
+  background-color: #ffffff93;
   padding: 15px 15px;
-  height: 20px;
+  height: 15px;
   z-index: 3; 
 }
 
@@ -149,19 +149,20 @@ padding-right: 50px;}
   left: 195px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 786px) {
   .forest{
     width: 100vw;
     float: left;
-    height: 75vh;
+    height: 120vh;
     margin: 20px auto 20px 20px;
     position: relative;
+    left: -75px;
   }
-
   .forest img {
     margin-top: 50px;
   }
 }
+
 
 /* ------------------------------------------------------------------------------------ */
 
@@ -333,12 +334,14 @@ a:focus-visible {
 /* ------------------------------------------------------------------------------------ */
 
 .Aliens {
-  margin-left: 10vw;
-  margin-right: 10vw;
+  margin-left: 19vw;
+  margin-right: 20vw;
+  margin-bottom: 15vw;
+  margin-top: 15vw;
   position: relative;
   z-index: 1;
-  width: 1240; 
-  height: 920;
+  width: 60%; 
+  height: auto;
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -347,10 +350,10 @@ a:focus-visible {
 } 
 
 .Aliens video {
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  object-fit: contain;
 }
 
 @media (max-width: 767px){
@@ -358,30 +361,29 @@ a:focus-visible {
     width: 90%;
     height: 200px;
     border-radius: 0;
-    margin-left: 25px;
-    margin-right: 0;
+    margin-left: 20px;
+    margin-right: 20px;
     border-radius: 50%;
   }
 
   .Aliens video {
+    left: 0;
     width: 100%;
     height: 100%;
-    justify-content: center;
-    object-fit: fill;
-    top:-50px;
+    object-fit: cover;
   }
 }
 /* ------------------------------------------------------------------------------------ */
 /* INTRODUCTION*/
 
-.introduction::-webkit-scrollbar{
+.introduction::-webkit-scrollbar {
   display: none;
 }
 
 .introduction{
   max-width: 20rem;
   height: 30rem;
-  background-color: #ffffff00;
+  background: transparent;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
@@ -413,7 +415,7 @@ a:focus-visible {
   max-width: 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .image12 {
     width: 100vw;
     float: left;
@@ -452,18 +454,16 @@ a:focus-visible {
 }
 
 .LordOfTheRings{
-  width: 1280px; 
-  height: 720px;
+  width: 60%; 
+  height: auto;
   position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 10vw;
-  margin-right: 10vw;
+  
   z-index: 1;
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   object-fit: fill;
+  background-color: black;
 }
 
 .LordOfTheRings video {
@@ -1021,7 +1021,7 @@ a:focus-visible {
 
 
 @media (max-width: 767px){
-  .introduction, .Chapter1, .Chapter3, .HumanTree, .Chapter3, .Dune, .Pmon, .Pmon2, .Prometheus, 
+  .introduction, .Chapter1, .Chapter3, .HumanTree, .Chapter3, .Dune, .Pmon, .Pmon2, .Prometheus, .Forevergreens, .Bonsai,
   .Pro, .Dunes, .Searchings, .Annihilations, .Searching, .Annihilation, .Theskin, .Searching2, .bib, .end, .image13, .Roots_forevergreens {
     float: left; 
     width: 100vw;
@@ -1029,6 +1029,7 @@ a:focus-visible {
     position: relative;
     margin-left: 0;
     margin-right:0;
+    height: 100%;
   }
 }
 
@@ -1061,7 +1062,7 @@ a:focus-visible {
     margin-right: 0;
     border-radius: 50%;
   }
-  .Datepalms video {
+  .Datepalms video  {
     width: 120%;
     height: 120%;
     border-radius: 0;
@@ -1136,7 +1137,7 @@ h3{
 
 @media (max-width: 767px) {
   h3 {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
