@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
@@ -39,8 +39,8 @@
 <!-- normalize 'resets' some browser properties to make them look the same across browsers -->
 <link rel="stylesheet" href="assets/css/normalize.css">
 <link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <!-- js -->
 <script type="text/javascript" src="assets/js/jquery-3.6.0.min.js"></script>
@@ -51,446 +51,41 @@
 <body>
 <!-- webpage content goes here -->
 <div class="page-wrapper">
-
-
-	<header>
-		<nav>
-			<ul class="nav-bar">
-			 <li class="logo"><a href= "#"><img src="content/favicon-32x32.png" alt="logo"></a></li>
-			  <input type="checkbox" id= "check">
-				<span class="menu">
-					<li><a href="#">Home</a></li>
-					<li><a href="#intro">Ch.1</a></li>
-					<li><a href="#Chapter1">Ch.2</a></li>
-					<li><a href="#Chapter2">Ch.3</a></li>
-					<li><a href="#Chapter3">Ch. 4</a></li>
+<header>
+	<nav>
+	 <ul class="nav-bar">
+		<li class="logo"><a href= "#"><img src="./content/tree1small.png" alt="logo"></a></li>
+		<input type="checkbox" id= "check">
+			<span class="menu">
+					<li><a href="#Home"><img src="content/Earpiecesmaller.png" alt="Tree1" style="width: 30px; height: auto;"></a></li>
+					<li><a href="#Friends"><img src="content/tree4small.png" alt="Bonsai" style="width: 30px; height: auto;"></a></li>
+					<li><a href="#HumanTree"><img src="content/tree5small.png" alt="Willow" style="width: 30px; height: auto;"></a></a></li>
+					<li><a href="#Forevergreens"><img src="content/tree3small.png" alt="Xmass" style="width: 30px; height: auto;"></a></li>
+					<li><a href="#Brown"><img src="content/tree9small.png" alt="Palm" style="width: 30px; height: auto;"></a></li>
+					<li><a href="#TheSkin"><img src="content/tree2small.png" alt="Tree2" style="width: 30px; height: auto;"></a></li>
+					<li><a href="#Blade"><img src="content/tree8small.png" alt="Oak" style="width: 30px; height: auto;"></a></li>
+					<li><a href="#Searching"><img src="content/tree6small.png" alt="Apple" style="width: 30px; height: auto;"></a></li>
 					<label for="check" class="close-menu"><i class="fas fa-times"></i></label>
 				</span>
 			 <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
 			</ul>
 		</nav>
-	</header>
+</header>
 
-<div class="forest"><img src="content/forest-panorama-rays-sunlight-scenic-fresh-green-deciduous-trees-sun-casting-its-light-foliage-53826213.jpg" alt="forest" width= "100%" height= "auto"></div>
-	
-<div id="wrapper">
-	<div class="viewport">
+<!--CUBE-->
+<div class="wrapper">
 	<div class="cube">
-				<div class="side">
-				  <div class="cube-image1"><img src= "content/earpiece.png"alt="cI1" width="100%" height="auto"></div>
-				</div>
-				<div class="side">
-				  <div class="cube-image"><img src= "content/earpiece.png"alt="cI1" width="100%" height="auto"></div>
-				</div>
-				<div class="side">
-				  <div class="cube-image"><img src= "content/earpiece.png"alt="cI1" width="100%" height="auto"></div>
-				</div>
-				<div class="side">
-				  <div class="cube-image"><img src= "content/earpiece.png"alt="cI1" width="100%" height="auto"></div>
-				</div>
-				<div class="side">
-				  <div class="cube-image"><img src= "content/earpiece.png"alt="cI1" width="100%" height="auto"></div>
-				</div>
-				<div class="side">
-				  <div class="cube-image active"><img src= "content/earpiece.png"alt="cI1" width="100%" height="auto"></div>
-			</div>
-		</div>
+		<div class="face1"><img src="content/earpiece.png" width="100%" height="auto"></div>
+		<div class="face2"><img src="content/earpiece.png" width="100%" height="auto"></div>
+		<div class="face3"><img src="content/earpiece.png" width="100%" height="auto"></div>
+		<div class="face4"><img src="content/earpiece.png" width="100%" height="auto"></div>
+		<div class="face5"><img src="content/earpiece.png" width="100%" height="auto"></div>
+		<div class="face6"><img src="content/earpiece.png" width="100%" height="auto"></div>
 	</div>
 </div>
 
-	
-<!--  JAVASCRIPT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 
-<script>
-var events = new Events();
-events.add = function(obj) {
-  obj.events = { };
-}
-events.implement = function(fn) {
-  fn.prototype = Object.create(Events.prototype);
-}
-
-function Events() {
-  this.events = { };
-}
-Events.prototype.on = function(name, fn) {
-  var events = this.events[name];
-  if (events == undefined) {
-    this.events[name] = [ fn ];
-    this.emit('event:on', fn);
-  } else {
-    if (events.indexOf(fn) == -1) {
-      events.push(fn);
-      this.emit('event:on', fn);
-    }
-  }
-  return this;
-}
-Events.prototype.once = function(name, fn) {
-  var events = this.events[name];
-  fn.once = true;
-  if (!events) {
-    this.events[name] = [ fn ];
-    this.emit('event:once', fn);
-  } else {
-    if (events.indexOf(fn) == -1) {
-      events.push(fn);
-      this.emit('event:once', fn);
-    }
-  }
-  return this;
-}
-Events.prototype.emit = function(name, args) {
-  var events = this.events[name];
-  if (events) {
-    var i = events.length;
-    while(i--) {
-      if (events[i]) {
-        events[i].call(this, args);
-        if (events[i].once) {
-          delete events[i];
-        }
-      }
-    }
-  }
-  return this;
-}
-Events.prototype.unbind = function(name, fn) {
-  if (name) {
-    var events = this.events[name];
-    if (events) {
-      if (fn) {
-        var i = events.indexOf(fn);
-        if (i != -1) {
-          delete events[i];
-        }
-      } else {
-        delete this.events[name];
-      }
-    }
-  } else {
-    delete this.events;
-    this.events = { };
-  }
-  return this;
-}
-
-var userPrefix;
-
-var prefix = (function () {
-  var styles = window.getComputedStyle(document.documentElement, ''),
-    pre = (Array.prototype.slice
-      .call(styles)
-      .join('') 
-      .match(/-(moz|webkit|ms)-/) || (styles.OLink === '' && ['', 'o'])
-    )[1],
-    dom = ('WebKit|Moz|MS|O').match(new RegExp('(' + pre + ')', 'i'))[1];
-  userPrefix = {
-    dom: dom,
-    lowercase: pre,
-    css: '-' + pre + '-',
-    js: pre[0].toUpperCase() + pre.substr(1)
-  };
-})();
-
-function bindEvent(element, type, handler) {
-  if(element.addEventListener) {
-    element.addEventListener(type, handler, false);
-  } else {
-    element.attachEvent('on' + type, handler);
-  }
-}
-
-function Viewport(data) {
-  events.add(this);
-
-  var self = this;
-
-  this.element = data.element;
-  this.fps = data.fps;
-  this.sensivity = data.sensivity;
-  this.sensivityFade = data.sensivityFade;
-  this.touchSensivity = data.touchSensivity;
-  this.speed = data.speed;
-
-  this.lastX = 0;
-  this.lastY = 0;
-  this.mouseX = 0;
-  this.mouseY = 0;
-  this.distanceX = 0;
-  this.distanceY = 0;
-  this.positionX = 1122;
-  this.positionY = 136;
-  this.torqueX = 0;
-  this.torqueY = 0;
-
-  this.down = false;
-  this.upsideDown = false;
-
-  this.previousPositionX = 0;
-  this.previousPositionY = 0;
-
-  this.currentSide = 0;
-  this.calculatedSide = 0;
-
-
-  bindEvent(document, 'mousedown', function() {
-    self.down = true;
-  });
-
-  bindEvent(document, 'mouseup', function() {
-    self.down = false;
-  });
-  
-  bindEvent(document, 'keyup', function() {
-    self.down = false;
-  });
-
-  bindEvent(document, 'mousemove', function(e) {
-    self.mouseX = e.pageX;
-    self.mouseY = e.pageY;
-  });
-
-  bindEvent(document, 'touchstart', function(e) {
-
-    self.down = true;
-    e.touches ? e = e.touches[0] : null;
-    self.mouseX = e.pageX / self.touchSensivity;
-    self.mouseY = e.pageY / self.touchSensivity;
-    self.lastX  = self.mouseX;
-    self.lastY  = self.mouseY;
-  });
-
-  bindEvent(document, 'touchmove', function(e) {
-    if(e.preventDefault) { 
-      e.preventDefault();
-    }
-
-    if(e.touches.length == 1) {
-
-      e.touches ? e = e.touches[0] : null;
-
-      self.mouseX = e.pageX / self.touchSensivity;
-      self.mouseY = e.pageY / self.touchSensivity;
-
-    }
-  });
-
-  bindEvent(document, 'touchend', function(e) {
-    self.down = false;
-  });  
-
-  setInterval(this.animate.bind(this), this.fps);
-
-}
-events.implement(Viewport);
-Viewport.prototype.animate = function() {
-
-  this.distanceX = (this.mouseX - this.lastX);
-  this.distanceY = (this.mouseY - this.lastY);
-
-  this.lastX = this.mouseX;
-  this.lastY = this.mouseY;
-
-  if(this.down) {
-    this.torqueX = this.torqueX * this.sensivityFade + (this.distanceX * this.speed - this.torqueX) * this.sensivity;
-    this.torqueY = this.torqueY * this.sensivityFade + (this.distanceY * this.speed - this.torqueY) * this.sensivity;
-  }
-
-  if(Math.abs(this.torqueX) > 1.0 || Math.abs(this.torqueY) > 1.0) {
-    if(!this.down) {
-      this.torqueX *= this.sensivityFade;
-      this.torqueY *= this.sensivityFade;
-    }
-
-    this.positionY -= this.torqueY;
-
-    if(this.positionY > 360) {
-      this.positionY -= 360;
-    } else if(this.positionY < 0) {
-      this.positionY += 360;
-    }
-
-    if(this.positionY > 90 && this.positionY < 270) {
-      this.positionX -= this.torqueX;
-
-      if(!this.upsideDown) {
-        this.upsideDown = true;
-        this.emit('upsideDown', { upsideDown: this.upsideDown });
-      }
-
-    } else {
-
-      this.positionX += this.torqueX;
-
-      if(this.upsideDown) {
-        this.upsideDown = false;
-        this.emit('upsideDown', { upsideDown: this.upsideDown });
-      }
-    }
-
-    if(this.positionX > 360) {
-      this.positionX -= 360;
-    } else if(this.positionX < 0) {
-      this.positionX += 360;
-    }
-
-    if(!(this.positionY >= 46 && this.positionY <= 130) && !(this.positionY >= 220 && this.positionY <= 308)) {
-      if(this.upsideDown) {
-        if(this.positionX >= 42 && this.positionX <= 130) {
-          this.calculatedSide = 3;
-        } else if(this.positionX >= 131 && this.positionX <= 223) {
-          this.calculatedSide = 2;
-        } else if(this.positionX >= 224 && this.positionX <= 314) {
-          this.calculatedSide = 5;
-        } else {
-          this.calculatedSide = 4;
-        }
-      } else {
-        if(this.positionX >= 42 && this.positionX <= 130) {
-          this.calculatedSide = 5;
-        } else if(this.positionX >= 131 && this.positionX <= 223) {
-          this.calculatedSide = 4;
-        } else if(this.positionX >= 224 && this.positionX <= 314) {
-          this.calculatedSide = 3;
-        } else {
-          this.calculatedSide = 2;
-        }
-      }
-    } else {
-      if(this.positionY >= 46 && this.positionY <= 130) {
-        this.calculatedSide = 6;
-      }
-
-      if(this.positionY >= 220 && this.positionY <= 308) {
-        this.calculatedSide = 1;
-      }
-    }
-
-    if(this.calculatedSide !== this.currentSide) {
-      this.currentSide = this.calculatedSide;
-      this.emit('sideChange');
-    }
-
-  }
-
-  this.element.style[userPrefix.js + 'Transform'] = 'rotateX(' + this.positionY + 'deg) rotateY(' + this.positionX + 'deg)';
-
-  if(this.positionY != this.previousPositionY || this.positionX != this.previousPositionX) {
-    this.previousPositionY = this.positionY;
-    this.previousPositionX = this.positionX;
-
-    this.emit('rotate');
-
-  }
-
-}
-var viewport = new Viewport({
-  element: document.getElementsByClassName('cube')[0],
-  fps: 20,
-  sensivity: .1,
-  sensivityFade: .93,
-  speed: 2,
-  touchSensivity: 1.5
-});
-
-function Cube(data) {
-  var self = this;
-
-  this.element = data.element;
-  this.sides = this.element.getElementsByClassName('side');
-
-  this.viewport = data.viewport;
-  this.viewport.on('rotate', function() {
-    self.rotateSides();
-  });
-  this.viewport.on('upsideDown', function(obj) {
-    self.upsideDown(obj);
-  });
-  this.viewport.on('sideChange', function() {
-    self.sideChange();
-  });
-}
-Cube.prototype.rotateSides = function() {
-  var viewport = this.viewport;
-  if(viewport.positionY > 90 && viewport.positionY < 270) {
-    this.sides[0].getElementsByClassName('cube-image')[0].style[userPrefix.js + 'Transform'] = 'rotate(' + (viewport.positionX + viewport.torqueX) + 'deg)';
-    this.sides[5].getElementsByClassName('cube-image')[0].style[userPrefix.js + 'Transform'] = 'rotate(' + -(viewport.positionX + 180 + viewport.torqueX) + 'deg)';
-  } else {
-    this.sides[0].getElementsByClassName('cube-image')[0].style[userPrefix.js + 'Transform'] = 'rotate(' + (viewport.positionX - viewport.torqueX) + 'deg)';
-    this.sides[5].getElementsByClassName('cube-image')[0].style[userPrefix.js + 'Transform'] = 'rotate(' + -(viewport.positionX + 180 - viewport.torqueX) + 'deg)';
-  }
-}
-Cube.prototype.upsideDown = function(obj) {
-
-  var deg = (obj.upsideDown == true) ? '180deg' : '0deg';
-  var i = 5;
-
-  while(i > 0 && --i) {
-    this.sides[i].getElementsByClassName('cube-image')[0].style[userPrefix.js + 'Transform'] = 'rotate(' + deg + ')';
-  }
-
-}
-Cube.prototype.sideChange = function() {
-
-  for(var i = 0; i < this.sides.length; ++i) {
-    this.sides[i].getElementsByClassName('cube-image')[0].className = 'cube-image';    
-  }
-
-  this.sides[this.viewport.currentSide - 1].getElementsByClassName('cube-image')[0].className = 'cube-image active';
-
-}
-
-new Cube({
-  viewport: viewport,
-  element: document.getElementsByClassName('cube')[0]
-});
-
-</script>
-
-<!-- SCRIPTEND!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-
-<!--
-<div id = "boxes">
-	<div id = "leftbox">
-		<div class="image1">
-			<figure>  <a href="content/painting-forest-lake.jpg" target="_blank"> 
-						<img src="content/painting-forest-lake.jpg" alt="A painted representation of a forest with a big blue lake" width="100%" height="auto">
-					</a>	
-			</figure>
-		</div>
-	</div>
-	 
-	<div id = "middlebox">
-		<h2>text</h2>
-		<h1>text</h1>
-	</div>
-	 
-	<div id = "rightbox">
-		<h2>text</h2>
-	text
-	</div>
-</div>
--->
-			<!--
-			<h1>The most underrated actor</h1>
-			<h3><p>A <strong>document</strong> by <em>Alice Vink</em></p></h3>
-
-		<h6>
-		
-
-			<nav>
-				<ul>
-					<li><a href="#intro">Homesickness to a natural planet</a></li>
-					<li><a href="#chapter-1">"Many of these trees were my friends...”</a></li>
-					<li><a href="#chapter-2">The human tree</a></li>
-					<li><a href="#chapter-3">“Forever-greens”</a></li>
-					<li><a href="#epilogue">The Human is a Parasite</a></li>
-				</ul>
-			</nav>
-		</h6>
-
-	-->
+<div class="forest"><img src="content/Tree1.png" alt="forest"></div>
 
 </header>
 
@@ -499,22 +94,20 @@ new Cube({
 	<source src="content/Aliens 1986_clip.mp4" type="video/mp4"></video>
 </div>
 
-
 <div class = "introduction">
-
-	<a id="intro"><h1 id="intro">Homesickness to a natural planet</h1></a>
+<a id="Home"><h1 id="intro">Homesickness to a natural planet</h1></a>
 			<h3>
 				<p>
 					Ellen Ripley gazes at a grass field with trees while being seated on a bench surrounded by smaller plants. 
-					She wishes she could feel the soft blades of grass and touch the rough bark of the trees.<br>
+					She wishes she could feel the soft blades of grass and touch the rough bark of the trees.
 					However, as the camera zooms out, it reveals the harsh reality. The idyllic landscape is just a screen. 
 					Ellen uses a small remote hidden in her hand to turn it off and looks down at the floor. The plants around her are all fake, 
 					and the bench isn’t located in a field but a room that resembles a waiting area.<br> 
-					Ellen looks worried, we later find out that she was waiting for news about her daughter whom she hasn’t heard from for so long. 
+					Ellen looks worried, we later find out that she was waiting for news about her daughter whom she hasn’t heard from for so long.<br> 
 					The green scenery in this scene of the film <span class="link" onmouseenter="displayImg('content/ezgif-2-07430d05cb.gif', this); " onmouseout="removeImg();">
-					Aliens (1986)</span> is a simulation of a current (and idealised) world in a faraway future, 
-					where humans likely no longer have access to nature in this form.[1]<br>
-				
+					Aliens (1986)<sup class="footnote">[1]</sup></span> is a simulation of a current (and idealised) world in a faraway future, 
+					where humans likely no longer have access to nature in this form.<br>
+					
 					Nature then becomes a replica, produced on a screen, a hyper 
 					digital and hyperreal image. A simulacra. Many other sci-fi movies set in future, located in outer space utilize similar green
 					imagery to evoke a sense of nostalgia.<br><br>
@@ -524,472 +117,698 @@ new Cube({
 					which is one of the many reasons for issues like biodiversity loss, pollution, and exhaustion of the soil. 
 					I want to understand better why this has happened. I aim to explore this topic, through an examination of contemporary popular (and less popular) movies.
 					I’m using the tree as a ‘metaphor’ for nature in the wider sense. Why movies? Because movies mirror society’s ideas, norms, and values, and express 
-					them in a visual and narrative form. <br><br> 
+					them in a visual and narrative form.<sup class="footnote">[2]</sup><br><br> 
 					
 					Nature is an abstract concept that is difficult to define, with its meaning changing throughout history. In ancient Greece the word is based
 					upon the verbal root of “growing, producing” and in ancient Rome, it held a primitive meaning of “birth, initial character” post-romantic
-					philosophers like Rousseau and Marx defined it as “The whole of the material reality, considered as independent of human activity”.  
+					philosophers like Rousseau and Marx defined it as “The whole of the material reality, considered as independent of human activity”.[3]  
 					In this context the concept of nature refers to the natural world, as it exists without human intervention or influence. 
 					It is a view of nature that sees it as a collection of physical things, such as plants, animals, rocks, and water that are separate 
 					from human society and culture. However, this definition creates a false separation between humans and nature.<br><br> <br> 
 					
 					I concur with the concept of nature as physical things being born, but my entire thesis discusses the symbolism and control of the natural world. 
 					And since I am looking at contemporary movies, which are part of culture I must search for a better fitting concept that includes cultural and 
-					controlled nature. <br> So, what is culture? culture is the arts, the ideas the intellectual expression of a society. 
+					controlled nature. <br> So, what is culture? <br> culture is the arts, the ideas the intellectual expression of a society. 
 					Its purpose is to interpret and give meaning to the world around us, what we call reality.
-					Contemporary movies are part of post-modern culture. Which means that according to Baudrillard, 
-					they are referencing other pieces of culture, because we are so bombarded with images, that that became our new reality. 
-					Culture is no longer related to reality (as it did in pre-modern era with high art) but it is making simulations of simulations,
-					what Baudrillard calls a simulacrum. We are now entering a time where we are unable to distinguish what is real and what is simulated, hyperreality. <br>  
-					
-					So, what we think about is nature, is a simulation, or hyperreality, of “The whole of the material reality, considered as independent of human activity”.
+					Contemporary movies are part of post-modern culture. Which means that according to <span class="link" onmouseenter="displayImg('content/earpiece.png', this); " onmouseout="removeImg();">Baudrillard,</span>
+					culture is no longer related to reality (as it did in pre-modern) but it is making simulations of simulations,
+					Baudrillard calls this a simulacrum. We are now entering a time where we are unable to distinguish what is real and what is simulated, hyperreality.<sup class="footnote">[4]</sup><br>  
+					<br>
+					So, what we think about is nature, is a simulation, or hyperreality, of “The whole of the material reality, considered as independent of human activity”.<br>
 					Koert van Mensvoort, a Dutch philosopher, acknowledge this, we see nature as a beautiful phenomenon, that we admire from our screen, 
 					and use as a marketing tool to sell products.  He thinks we must reevaluate nature, because we are born in a designed (simulated) world.<br> 
 					We used to see everything born as nature, but our definition is shifting. We have a new nature caused and controlled by people. 
 					He states that maybe everything (created or not created by us) beyond our control is our next nature. 
-					Therefore, in this theory technological developments can also be considered as nature. Because we as humans are technological beings. <br> 
+					Therefore, in this theory technological developments can also be considered as nature. Because we as humans are technological beings.<sup class="footnote">[5]</sup><br> 
 					
 					Nature is an ever-evolving concept, that hold different meaning throughout history. 
-					One of those meanings is: the physical world and living organisms that exist without human intervention. 
+					One of those meanings is: the physical world and living organisms that exist without human intervention.
 					The modern age blurs the lines between what is real and what is simulated, thanks to the significant force of
-					culture shaping our understanding of nature. This has led to the emergence of “next-nature”, recognizing that human 
-					have become technological being who design and control their environment, blurring the lines between what is considered natural and artificial. 
+					culture shaping our understanding of nature. This has led to the emergence of “next-nature”, recognizing that humans 
+					have become technological beings who design and control their environment, blurring the lines between what is considered natural and artificial.<br><br> 
 					Consequently, nature can be defined as the sum of all physical and technological phenomena that exist beyond human control,
 					including the old definition of nature as everything born, as well as the new definition of nature caused by people. 
 					For this thesis focusing on movies, which are part of post-modern culture, the simulacrum of our nature is being explored to 
-					understand our relationship with it.<br> 
+					understand our relationship with it.<br><br>
 					
-					I hope to find answers to one or more of the following questions:<br> 
-					Can movies help me explain why our current way of ‘living’ with nature (or: relating to nature) is so unsustainable? <br> 
+					I hope to find answers to one or more of the following questions:<br>
+					Can movies help me explain why our current way of ‘living’ with nature (or: relating to nature) is so unsustainable? <br><br>
 					Can we change this unsustainable relationship and make it ‘better’/more sustainable, or do we have to accept that 
 					the Earth is changing (no more pristine nature, ancient forests, etc) and we need to find a new way to relate to it? <br><br> 
 					 
 					When thinking of a methodology: My thesis focus lies on the description of different cases deriving from film and popular culture. <br> 
-					The movies mentioned are Aliens (James Cameron, 1986), Lord of the rings The Two Towers (J. R. R. Tolkien books, 1954, 
-					and movie directed by Peter Jackson, 2002), My Princess Mononoke (Studio Ghibli, 1997), Prometheus (Ridley Scott, 2012),<br> 
-					The Skin I Live In (Pedro Almodóvar, 2011), Dune (Book by Frank Herbert 1965, movie Dennis Villeneuve 2021),<br> 
+					The movies mentioned are: &nbsp; Aliens (James Cameron, 1986), Lord of the rings The Two Towers (J. R. R. Tolkien books, 1954, 
+					and movie directed by Peter Jackson, 2002), My Princess Mononoke (Studio Ghibli, 1997), Prometheus (Ridley Scott, 2012), 
+					The Skin I Live In (Pedro Almodóvar, 2011), Dune (Book by Frank Herbert 1965, movie Dennis Villeneuve 2021),
 					Blade Runner 2048 (Dennis Villeneuve, 2017), Annihilation (only book Jeff Vandermeer). <br><br>	
 					<p>
 					<div class="link1"><a href="https://www.imdb.com/title/tt0090605/">[1]</a>&nbsp;&nbsp;&nbsp;Cameron, James. Aliens, 1986</p></div>
 					<div class="link1"><a href="https://www.researchgate.net/publication/337032532_Art_Cinema_and_Society_Sociological_Perspectives">[2]</a>&nbsp;&nbsp;&nbsp;Nascimento, Jonas Do. Art, Cinema And Society: Sociological Perspectives, 2019</p></div>
-					<div class="link1"><a href="https://www.researchgate.net/publication/337032532_Art_Cinema_and_Society_Sociological_Perspectives">[3]</a>&nbsp;&nbsp;&nbsp;</p></div>
+					<div class="link1"><a href="https://www.nature.com/articles/s41599-020-0390-y">[3]</a>&nbsp;&nbsp;&nbsp;Ducarme, Frédéric. Couvet, Denis. What does ‘nature’ mean?, 2020</p></div>
+					<div class="link1"><a href="https://www.youtube.com/watch?v=5D86_ptqd8I&t=1s">[4]</a>&nbsp;&nbsp;&nbsp;Youtube, The Media Insider, Postmodernism explained for beginners! Jean Baudrillard Simulacra and Hyperreality explained, 2022</p></div>
+					<div class="link1">[5]&nbsp;&nbsp;&nbsp;Van Mensvoort, Koert. Next Nature, 2019</p></div>
 		</p>
 	</h3>
 </div>
 
+<div class="image12" data-aos="zoom-in" data-aos-easing="ease-in-out-sine"><img src="content/Earpiecesmaller.png" alt="ear"></div>
 
-<div class="image12" data-aos="zoom-in"><video autoplay muted loop>
-	<source src="content/roots1.mp4" type="video/mp4"></video>
+<div class="LordOfTheRings"><video autoplay muted loop>
+<source src="content/Y2Mate.is - LOTR The Two Towers - Extended Edition - The Last March of the Ents-XzugQBkUrZk-1080p-1654456814597.mp4" type="video/mp4"></video></div>
+
+<div class="Chapter1"><a id="Friends"><h1 id="Many of these trees were my friends...">"Many of these trees were my friends"</h1></a>
+<h3>
+	<p>
+		Treebeard, the ancient guardian of the forest, descended slowly onto the destroyed forest ground, where only the stumps of his tree friends remained.<br>
+		His eyes filled with tears as he gasped for air, and spoke in a gruff voice: <br><br>
+		“Many of these trees were my friends, creatures I’ve known from nut and Eichhorn … 
+		They had voices too…”.<sup class="footnote">[6]</sup><br><br>
+		As clouds of black smoke rose from a nearby fort, Treebeard knew that this is the place where his tree friends were abducted. 
+		Furious at the thought of such a massacre, he screamed with rage, ‘Aaaaaagh!!!!’ <br>
+		On Treebeard’s shoulder rests, a small, human-like creature named Pippin, who is a Hobbit. 
+		Pippin and his Hobbit friend Mary encountered Treebeard in the forest while fleeing from the Orcs. 
+		Pippin looks around worriedly, “The forest is moving!” he screams. Tree Beard’s scream summoned thousands of Ents,<br><br>
+		“The last march of the Ents.”<sup class="footnote">[7]</sup><br><br>
+		Treebeard’s friends were cut down by the Orcs, who are the army of an evil wizard. Their wood was being used for fire and weapons for 
+		the impending war in Middle Earth, an imaginative interpretation of the Earth’s past (6000 years ago). 
+		All the stories that take place in Middle Earth were created by JRR Tolkien between 1937 and 1949.
+		The Ents are tree guardians, they were created to protect trees, Treebeard was one of those guardians. 
+		He is a slow-moving, old-looking tree-humanoid character. And with his many friendships, he reminds me of what Suzanne Simard calls a mother tree. 
+		These trees are the giants of the forest and share their food supplies (carbon and nitrogen) and wisdom with neighbouring trees via a 
+		mycelium network that is connected to their roots.<sup class="footnote">[8]</sup><br><br>
+		In 2015, Suzanne Simard, launched a large-scale scientific experiment to demonstrate that trees in a way communicate with one another. 
+		The giant mother trees, which are the tallest and receive the most sunlight, transfer sugar from their leaves to their roots via the process of 
+		photosynthesis. The sugar is then transported by the network of mycelium, to neighbouring baby trees living in the shadow of these giants. 
+		These baby trees receive so little sunlight, that they can’t survive without the food supply of the mother trees.<sup class="footnote">[9]</sup><br><br>
+
+		“Forests aren’t a bunch of trees competing, they are co-operators. Mother trees are vital for knowledge passed around in certain species.”<sup class="footnote">[10]</sup><br><br>
+
+		Trees also communicate warnings of impending danger, such as insect attacks. This communication doesn’t just occur via the mycelium network,
+		but also via a release of specific smells. For example, in the savannas in Africa, giraffes feed on Acacia trees. However, after a few minutes of 
+		eating the tasty leaves, the trees begin to protect themselves by releasing toxins that make their leaves taste bitter, a flavour giraffes dislike. 
+		The tree doesn’t only protect itself, but it also warns its neighbours by releasing a particular gas called ethylene, which the neighbouring trees can 
+		detect and respond to by releasing the bitter toxins into their leaves.<sup class="footnote">[11]</sup><br><br>
+
+		The massacre of Treebeard’s friends is a devasting sight of a devoured forest. Unfortunately, this is not so far away from our reality. 
+		Deforestation causes disfigured landscapes, clear cuts, burned ground, or an invasion of human-planted more useful tree species (such as palm oil).
+		In a virgin forest, human intervention should be absent, but unfortunately, this is not always the case. For example, in Romania, 
+		illegal logging is causing destruction to old-growth forests, as you can see in figure 2. This tragic event is taking place 
+	    around the world due to the constant demand for wood by international corporations. When forests are not protected, 
+		they become vulnerable to exploitation, and 100- to 200-year-old trees are cut down for the sake of producing cheap furniture.<sup class="footnote">[12]</sup> 
+		These old trees are most likely important hub trees, the mother trees. Cutting down the mother trees not only results in a visible 
+		disfiguration of the landscape but also breaks up an invisible social network that is important for trees to survive. 
+		<br><br>
+		Although a moving tree creature like Treebeard may not exist in our world. Trees as a collective do move in a very slow phase. Our clear cuts will not remain empty forever. 
+		Forests have the powerful potential to regenerate and regrow when human pressure on them lessens. However, this is not the only movement of our forests. 
+		Another march is taking place in the form of the tree line. The tree line is an invisible division of land on which trees can or cannot grow. 
+		Over centuries this division of land has slowly shifted due to changing temperatures.<sup class="footnote">[13]</sup> 
+		In recent years, we have observed that the treeline is moving up higher and in general further to the North as many places on earth become too hot for trees to survive.<sup class="footnote">[14]</sup> 
+		The rising temperatures not only make it harder for trees to survive but also lead to an alarming increase in wildfires. 
+		Wildfires are a natural part of the environment and nature’s way of cleaning out dead litter on the forest floor.<sup class="footnote">[15]</sup> 
+		However, due to the more frequent occurrence of wildfires and increased temperatures, forests struggle to recover, mainly because of a decrease in moisture, 
+		increasing moisture stress. Baby trees find it challenging to grow in these harsh living conditions.<sup class="footnote">[16]</sup>
+		Wildfires not only affect the trees but have detrimental consequences for the air quality, soil, water, and wildlife surrounding a forest.
+		The increased production of beef, soy, and palm oil is the biggest driver of deforestation after wildfires <sup class="footnote">[17]</sup> Forests must be cleared to make space for the cultivation of those products. 
+		As a result, one of the largest forests in the world, the Amazonian rainforest, has lost approximately a fifth of its forestland in the last 50 years.<sup class="footnote">[18]</sup> 
+		This has a global impact because the Amazonian rainforest not only provides us with food, but it also plays a critical role in the stabilizing the climate by 
+		storing 76 billion tons of carbon and releasing 20 billion tons of water.<sup class="footnote">[19]</sup><br><br>
+ 
+		“Trees’ services to our planet range from carbon storage, oxygen production to soil conservation and water cycle regulation.”<sup class="footnote">[20]</sup><br><br>
+
+		The practice of deforestation is not a new phenomenon, and it may be as old as the human occupation of the Earth itself.<sup class="footnote">[21]</sup>
+		From the moment our ancestors realized that trees could provide wood for shelter, fire for warmth and cooking, weapons for protection, 
+		and even food and medicine, the relationship between the humans and trees changed forever. Since then, trees have become a valuable resource for survival, profit, and comfort. 
+		Over the centuries, foresters have been practicing forest management, figuring out the most profitable ways to control forests for production. 
+		In central Europe, forest clearings were already notable 6000 years ago. in a complete regeneration of the forestlands of Europe. 
+		<br><br>As a result, Europe can now be considered a cultural landscape since all primary forests have been wiped out.<sup class="footnote">[22]</sup> 
+		After 1500 the wealth accumulated by the forests, led Europe “to invade the rest of the world, conquering, looting, trading and colonizing.”<sup class="footnote">[23]</sup> 
+		Since Homo sapiens began living like hunter-gatherers, approximately 10,000 years ago. 
+		Populations started to grow at an exponential rate. In ancient times, humans believed in animism, where both humans and non-humans embodied spiritual entities, 
+		that act alongside each other in the making of the world. However, this belief gave rise to a dilemma, where the boundaries between the use of nature and the appreciation of it were unclear.
+		Christianity introduced the root of a new attitude towards the natural world, which favoured anthropocentrism, putting humans at the centre of everything.<sup class="footnote">[24]</sup> 
+		<br><br>
+		“… the transition was more ominous; it was one that moved from man being a part of nature to man being her exploiter. 
+		Christianity and its doctrine of territorial domination were the root cause of this new coercive attitude to natural resources. By the ninth century, 
+		“Man and nature are now two things, and man is master”<sup class="footnote">[25]</sup><br><br>
+		After seeing all the devoured landscapes, the Ents of our world, are again uniting. 
+		But in a different form, than we might expect, the protectors of our tree friends are we. 
+		Many humans have united to set restrictions and laws surrounding the protection of forests. And it seems to work.<sup class="footnote">[26]</sup><br><br>
+		
+		<div class="link1"><a href="https://www.imdb.com/title/tt0167261/">[6]</a>&nbsp;&nbsp;&nbsp;Jackson, Peter. Lord of the rings Two Towers, 2002</p></div>
+		<div class="link1"><a href="https://www.imdb.com/title/tt0167261/">[7]</a>&nbsp;&nbsp;&nbsp;Jackson, Peter. Lord of the rings Two Towers, 2002</p></div>
+		<div class="link1"><a href="https://mothertreeproject.org/#:~:text=The%20Mother%20Tree%20Project%20explores,various%20harvesting%20and%20regeneration%20treatments.">[8]</a>&nbsp;&nbsp;&nbsp;Mother Tree Project, About mother trees in the forest</p></div>
+		<div class="link1"><a href="https://www.ted.com/talks/suzanne_simard_how_trees_talk_to_each_other?language=en">[9]</a>&nbsp;&nbsp;&nbsp;Ted Talk, Simard, Suzanne.</p></div>
+		<div class="link1">[10]&nbsp;&nbsp;&nbsp;Simard, Suzanne. Finding the Mother tree, 2021</p></div>
+		<div class="link1">[11]&nbsp;&nbsp;&nbsp;Wohlleben, Peter. The hidden life of trees, 2016</p></div>
+		<div class="link1"><a href="https://www.youtube.com/watch?v=e4EqKK9CvD8">[12]</a>&nbsp;&nbsp;&nbsp;ENDVR, The Real Cost of Cheap Wood, 2017</p></div>
+		<div class="link1"><a href="https://link.springer.com/article/10.1007/s11629-020-6221-1">[13]</a>&nbsp;&nbsp;&nbsp;Hansson, Amanda. Dargusch, Paul. Schulmeister, Jamie. 
+		A review of modern treeline migration, the factors controlling it and the implications for carbon storage, 2021</p>
+		</div>
+		<div class="link1"><a href="https://www.theguardian.com/news/2022/jan/20/norway-arctic-circle-trees-sami-reindeer-global-heating">[14]</a>&nbsp;&nbsp;&nbsp;The Guardian, ‘The treeline is out of control’: how the climate crisis is turning the Arctic green, 2022</p></div>
+		<div class="link1"><a href="https://www.science.org/content/article/ecosystems-could-once-bounce-back-wildfires-now-they-re-being-wiped-out-good#:~:text=From%20such%20ashes%2C%20ecosystems%20usually,out%20entire%20ecological%20communities%20forever.">[15]</a>&nbsp;&nbsp;&nbsp;Science.org, Ecosystems could once bounce back from wildfires. Now, they’re being wiped out for good</p></div>
+		<div class="link1"><a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/ele.12889">[16]</a>&nbsp;&nbsp;&nbsp;Stevens-Rumann, Camille S. Kemp, Kerry B. Higuera, Philip E. Harvey, Brian J. Rother, Monica T. Donato, 
+		Daniel C. Penelope, Morgan. Veblen, Thomas T. Evidence for declining forest resilience to wildfires under climate change, 2017</p></div>
+		<div class="link1"><a href="https://ourworldindata.org/deforestation">[17]</a>&nbsp;&nbsp;&nbsp;Ritchie, Hannah. Roser, Max. Deforestation and forest loss, 2021 </p></div>
+		<div class="link1"><a href="https://www.cfr.org/amazon-deforestation/#/en">[18]</a>&nbsp;&nbsp;&nbsp;CFR.org, Deforestation in the Amazon</p></div>
+		<div class="link1"><a href="https://www.wwf.org.uk/where-we-work/amazon">[19]</a>&nbsp;&nbsp;&nbsp;WWF.org.uk, The Amazon</p></div>
+		<div class="link1"><a href="https://www.nature.com/articles/s41598-020-63657-6">[20]</a>&nbsp;&nbsp;&nbsp;Bologna, Mauro. Aquino, Gerardo. Deforestation and world population sustainability, a quantitative analysis, 2020</p></div>
+		<div class="link1"><a href="http://geography.fullerton.edu/taylor/enst595t/darkages.pdf">[21]</a>&nbsp;&nbsp;&nbsp;Williams Micheal, Dark ages and dark areas: global deforestation in the deep past, 2000, p29</p></div>
+		<div class="link1"><a href="http://geography.fullerton.edu/taylor/enst595t/darkages.pdf">[22]</a>&nbsp;&nbsp;&nbsp;Williams Micheal, Dark ages and dark areas: global deforestation in the deep past, 2000, p29</p></div>
+		<div class="link1"><a href="http://geography.fullerton.edu/taylor/enst595t/darkages.pdf">[23]</a>&nbsp;&nbsp;&nbsp;Williams Micheal, Dark ages and dark areas: global deforestation in the deep past, 2000, p40</p></div>
+		<div class="link1"><a href="https://formafantasma.com/work/cambio">[24]</a>&nbsp;&nbsp;&nbsp;Formafantasma, Cambio, 2020 </p></div>
+		<div class="link1"><a href="http://geography.fullerton.edu/taylor/enst595t/darkages.pdf">[25]</a>&nbsp;&nbsp;&nbsp;Williams Micheal, Dark ages and dark areas: global deforestation in the deep past, 2000, p36</p></div>
+		<div class="link1"><a href="https://www.fao.org/forest-resources-assessment/2020/en/">[26]</a>&nbsp;&nbsp;&nbsp;Food and Agriculture Organization of the United Nations, Global Forest Resources Assessment 2020 Key Findings, 2020</p></div>
+	</p>
+</h3>
 </div>
 
-<div class="forest-no">
-	<figure> <h6> <a href="content/ezgif-2-07430d05cb.gif" target="_blank"> </h6>
-				<img src="content/forest-panorama-rays-sunlight-scenic-fresh-green-deciduous-trees-sun-casting-its-light-foliage-53826213.jpg" alt="forest-no" width="100%" height="auto">
-			</a>
-		
-		<h6>
-			<figcaption><p><em><a href="https://www.youtube.com/watch?v=bkKTSw4pL2A" target="_blank">Painting of a forest 
-			with a blue lake</a>, by Jane Doe</em></p></figcaption>
-		</h6>
-	</figure>
-</div>
+<div class="Pmon" data-aos="zoom-in" data-aos-easing="ease-in-out-sine"><img src="content/tree4.png" alt="tree4"></div>
 
-
-
-<div class="Chapter1">
-
-<a id="Chapter1"><h1 id="Many of these trees were my friends...">"Many of these trees were my friends</h1></a>
-
-			<h3>
-				<p>
-					Treebeard, the ancient guardian of the forest, descended slowly onto the destroyed forest ground, where only the stumps of his tree friends remained.<br>
-					His eyes filled with tears as he gasped for air, and spoke in a gruff voice: <br><br>
-					“Many of these trees were my friends, creatures I’ve known from nut and Eichhorn … 
-					They had voices too…”. <br><br>
-					As clouds of black smoke rose from a nearby fort, Treebeard knew that this is the place where his tree friends were abducted. 
-					Furious at the thought of such a massacre, he screamed with rage, ‘Aaaaaagh!!!!’ <br>
-					On Treebeard’s shoulder rests, a small, human-like creature named Pippin, who is a Hobbit. 
-					Pippin and his Hobbit friend Mary encountered Treebeard in the forest while fleeing from the Orcs. 
-					Pippin looks around worriedly, “The forest is moving!” he screams. Tree Beard’s scream summoned thousands of Ents,<br><br>
-					“The last march of the Ents.” <br><br>
-					Treebeard’s friends were cut down by the Orcs, who are the army of an evil wizard. Their wood was being used for fire and weapons for 
-					the impending war in Middle Earth, an imaginative interpretation of the Earth’s past (6000 years ago). 
-					All the stories that take place in Middle Earth were created by JRR Tolkien between 1937 and 1949.
-					The Ents are tree guardians, they were created to protect trees, Treebeard was one of those guardians. 
-					He is a slow-moving, old-looking tree-humanoid character. And with his many friendships, he reminds me of what Suzanne Simard calls a mother tree. 
-					These trees are the giants of the forest and share their food supplies (carbon and nitrogen) and wisdom with neighbouring trees via a 
-					mycelium network that is connected to their roots. 
-					In 2015, Suzanne Simard, launched a large-scale scientific experiment to demonstrate that trees in a way communicate with one another. 
-					The giant mother trees, which are the tallest and receive the most sunlight, transfer sugar from their leaves to their roots via the process of 
-					photosynthesis. The sugar is then transported by the network of mycelium, to neighbouring baby trees living in the shadow of these giants. 
-					These baby trees receive so little sunlight, that they can’t survive without the food supply of the mother trees.   
-					“Forests aren’t a bunch of trees competing, they are co-operators. Mother trees are vital for knowledge passed around in certain species. ”
-					Trees also communicate warnings of impending danger, such as insect attacks. This communication doesn’t just occur via the mycelium network,
-					but also via a release of specific smells. For example, in the savannas in Africa, giraffes feed on Acacia trees. However, after a few minutes of 
-					eating the tasty leaves, the trees begin to protect themselves by releasing toxins that make their leaves taste bitter, a flavour giraffes dislike. 
-					The tree doesn’t only protect itself, but it also warns its neighbours by releasing a particular gas called ethylene, which the neighbouring trees can 
-					detect and respond to by releasing the bitter toxins into their leaves.					Treebeard, the ancient guardian of the forest, descended slowly onto the destroyed forest ground, where only the stumps of his tree friends remained.<br>
-					His eyes filled with tears as he gasped for air, and spoke in a gruff voice: <br><br>
-					“Many of these trees were my friends, creatures I’ve known from nut and Eichhorn … 
-					They had voices too…”. <br><br>
-					As clouds of black smoke rose from a nearby fort, Treebeard knew that this is the place where his tree friends were abducted. 
-					Furious at the thought of such a massacre, he screamed with rage, ‘Aaaaaagh!!!!’ <br>
-					On Treebeard’s shoulder rests, a small, human-like creature named Pippin, who is a Hobbit. 
-					Pippin and his Hobbit friend Mary encountered Treebeard in the forest while fleeing from the Orcs. 
-					Pippin looks around worriedly, “The forest is moving!” he screams. Tree Beard’s scream summoned thousands of Ents,<br><br>
-					“The last march of the Ents.” <br><br>
-					Treebeard’s friends were cut down by the Orcs, who are the army of an evil wizard. Their wood was being used for fire and weapons for 
-					the impending war in Middle Earth, an imaginative interpretation of the Earth’s past (6000 years ago). 
-					All the stories that take place in Middle Earth were created by JRR Tolkien between 1937 and 1949.
-					The Ents are tree guardians, they were created to protect trees, Treebeard was one of those guardians. 
-					He is a slow-moving, old-looking tree-humanoid character. And with his many friendships, he reminds me of what Suzanne Simard calls a mother tree. 
-					These trees are the giants of the forest and share their food supplies (carbon and nitrogen) and wisdom with neighbouring trees via a 
-					mycelium network that is connected to their roots. 
-					In 2015, Suzanne Simard, launched a large-scale scientific experiment to demonstrate that trees in a way communicate with one another. 
-					The giant mother trees, which are the tallest and receive the most sunlight, transfer sugar from their leaves to their roots via the process of 
-					photosynthesis. The sugar is then transported by the network of mycelium, to neighbouring baby trees living in the shadow of these giants. 
-					These baby trees receive so little sunlight, that they can’t survive without the food supply of the mother trees.   
-					“Forests aren’t a bunch of trees competing, they are co-operators. Mother trees are vital for knowledge passed around in certain species. ”
-					Trees also communicate warnings of impending danger, such as insect attacks. This communication doesn’t just occur via the mycelium network,
-					but also via a release of specific smells. For example, in the savannas in Africa, giraffes feed on Acacia trees. However, after a few minutes of 
-					eating the tasty leaves, the trees begin to protect themselves by releasing toxins that make their leaves taste bitter, a flavour giraffes dislike. 
-					The tree doesn’t only protect itself, but it also warns its neighbours by releasing a particular gas called ethylene, which the neighbouring trees can 
-					detect and respond to by releasing the bitter toxins into their leaves. 
-
-				</p>
-	
-			</h3>
-<!--
-
-			<details>
-		
-
-				<summary>
-					<h1 id="intro">Sub-content</h1>
-				</summary>
-
-				<h3>
-					<p>
-						Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
-						Sed a sem dignissim, pulvinar risus sed, maximus mi. Sed non neque et nulla dignissim convallis. 
-						In tincidunt pharetra feugiat. Etiam vel velit accumsan, hendrerit lorem et, aliquet est. 
-						Fusce et ante porta, malesuada felis eget, vulputate elit. Quisque eu lacus egestas, maximus tellus non, commodo arcu. 
-						Nullam orci odio, molestie vel suscipit vitae, aliquam at ante. Sed vehicula dapibus elit, eget posuere sem porttitor eget. 
-						Fusce aliquam interdum tortor, et pharetra dui. Donec consectetur vestibulum ipsum, sed euismod odio. 
-						Mauris dictum, velit sit amet dictum imperdiet, enim ex laoreet lorem, ut sodales ex eros nec turpis.
-					</p>
-		
-				</h3>
-
-			</details>
-
-			<details>
-
-				<summary>
-					<h3 id="intro">More sub-content</h2>
-				</summary>
-
-				<h3>
-					<p>
-						Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
-						Sed a sem dignissim, pulvinar risus sed, maximus mi. Sed non neque et nulla dignissim convallis. 
-						In tincidunt pharetra feugiat. Etiam vel velit accumsan, hendrerit lorem et, aliquet est. 
-						Fusce et ante porta, malesuada felis eget, vulputate elit. Quisque eu lacus egestas, maximus tellus non, commodo arcu. 
-						Nullam orci odio, molestie vel suscipit vitae, aliquam at ante. Sed vehicula dapibus elit, eget posuere sem porttitor eget. 
-						Fusce aliquam interdum tortor, et pharetra dui. Donec consectetur vestibulum ipsum, sed euismod odio. 
-						Mauris dictum, velit sit amet dictum imperdiet, enim ex laoreet lorem, ut sodales ex eros nec turpis.
-					</p>
-		
-				</h3>
-				<h3>
-					<p>
-						Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
-						Sed a sem dignissim, pulvinar risus sed, maximus mi. Sed non neque et nulla dignissim convallis. 
-						In tincidunt pharetra feugiat. Etiam vel velit accumsan, hendrerit lorem et, aliquet est. 
-						Fusce et ante porta, malesuada felis eget, vulputate elit. Quisque eu lacus egestas, maximus tellus non, commodo arcu. 
-						Nullam orci odio, molestie vel suscipit vitae, aliquam at ante. Sed vehicula dapibus elit, eget posuere sem porttitor eget. 
-						Fusce aliquam interdum tortor, et pharetra dui. Donec consectetur vestibulum ipsum, sed euismod odio. 
-						Mauris dictum, velit sit amet dictum imperdiet, enim ex laoreet lorem, ut sodales ex eros nec turpis.
-					</p>
-		
-				</h3>
-
-			</details>
-
-			<h3>
-				<p>
-					Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
-					Sed a sem dignissim, pulvinar risus sed, maximus mi. Sed non neque et nulla dignissim convallis. 
-					In tincidunt pharetra feugiat. Etiam vel velit accumsan, hendrerit lorem et, aliquet est. 
-					Fusce et ante porta, malesuada felis eget, vulputate elit. Quisque eu lacus egestas, maximus tellus non, commodo arcu. 
-					Nullam orci odio, molestie vel suscipit vitae, aliquam at ante. Sed vehicula dapibus elit, eget posuere sem porttitor eget. 
-					Fusce aliquam interdum tortor, et pharetra dui. Donec consectetur vestibulum ipsum, sed euismod odio. 
-					Mauris dictum, velit sit amet dictum imperdiet, enim ex laoreet lorem, ut sodales ex eros nec turpis.
-				</p>
-	
-			</h3>
-		-->
-
-</div>
-
-<div class="Pmon" data-aos="zoom-in"></div>
+<div class="Pmon2" data-aos="zoom-in" data-aos-easing="ease-in-out-sine"><img src="content/tree5.png"alt="tree5"></div>
 
 <div class="HumanTree">
-<a id= "Chapter2"><h1 id="HumanTree">The Human Tree</h1></a>
-
+<a id= "HumanTree"><h1 id="HumanTree">The Human Tree</h1></a>
 			<h3>
 				<p>
-					The Christian God has established a hierarchical structure that places humans above plants, considering humans to be more valuable. 
-					This has potentially les to the development of an anthropocentric way of thinking, where humans are the centre of the universe. 
-					However, there are many other ways of thinking like biocentrism, ecocentrism and transhumanism for example.  
-					Additionally, other religions, like Buddhism have different structures that oppose a hierarchical one. 
+					The Christian God has established a hierarchical structure that places humans above plants, considering humans to be more valuable.
+					This has potentially led to the development of an anthropocentric way of thinking, wherein humans are the centre of the universe.<br>
+					However, there are many other ways of thinking such as biocentrism, ecocentrism and transhumanism for example.<br>
+					Additionally, other religions, like Buddhism have different structures that oppose a hierarchical one.<br>
 					Animism is the belief that all living creatures have a soul, everything in nature possesses some kind of spiritual essence. 
-					A movie that tries to illustrate this is in a very beautiful way is the Japanese anime Princess Mononoke . 
-					In the movie trees, forest and animal spirits take physical forms, becoming creatures with emotions and human voices. 
-					These creatures are angry because humans are attacking the forest, they are exploiting the forest and killing the animals living in it. 
+					A movie that tries to illustrate this in a very beautiful way is the Japanese anime Princess Mononoke.<sup class="footnote">[27]</sup><br><br>
+				
+					In the movie trees, forest and animal spirits take physical forms, becoming creatures with emotions and human voices.<br>
+					These creatures are angry because <span class="link" onmouseenter="displayImg('content/download (1).jfif', this); " onmouseout="removeImg();">
+					humans are exploiting the forest </span>, and killing the animals living in it.<br> 
 					The equality the organisms is portrayed through their emotions and desires. Not only humans want and feel things, but all the living 
-					creatures are full of emotions and desires. 
+					creatures are full of emotions and desires.<br>
+
 					While the spirits of the animals, and the humans are fighting and relentlessly killing each other, the forest spirit in Princess Mononoke 
-					remains calm. It holds the knowledge and power over the forest, and had the ability to decide what will live and what will die. 
+					remains calm. It holds the knowledge and power over the forest, and has the ability to decide what will live and what will die.<br><br>
+
 					In a forest life and death are in a way intertwined, what dies becomes something else. The forest spirit recognizes that the forest 
 					is a collective being and the scars caused by the humans eventually heal. However the spirit’s calmness disappears when one of the humans 
 					chops off its head and steals it. The forest spirit cannot continue (too an afterlife?) without his head and releases a deathly black gulp
 					that devours the whole environment. The spirit rests only when its head is returned, emphasizing the importance of protecting the knowledge
-					and intelligence of the forest to ensure it’s survival. <br> When the head is returned baby trees start to grow from the black gulp the spirit released. 
+					and intelligence of the forest to ensure it’s survival. <br><br>When the head is returned baby trees start to grow from the black gulp the spirit released. 
 					In both Princess Mononoke and The Lord of the Rings (where the Ent and tree friends are also victimized), trees are portrayed as human-like creatures
 					that might have been created to provoke empathy in the audience. 
 					<br><br>
 					We need to protect ourselves against ourselves.
-
-				</p>>
-
+					<div class="link1"><a href="https://www.imdb.com/title/tt0119698/">[27]</a>&nbsp;&nbsp;&nbsp;Miyazaki, Hayao. Princess Mononoke, 1997</p></div>
 </div>
 
-<div class="Pro" data-aos="zoom-in"></div>
 
-<div class="Chapter3">
-	<a id="chapter-3"><h1 id="Chapter3">“Forever-greens”</h1></a>
+<div class="Prome"><video autoplay muted loop>
+	<source src="content/Prometheus.mp4" type="video/mp4">
+</div>
+
+<div class="Forevergreens">
+	<a id="Forevergreens"><h1 id="Chapter3">“Forever-greens”</h1></a>
 		<h3>
 			<p>
-					It’s Christmas 2089 and Janek has just awoken from his hypersleep of two long years. He is now 35 light-years away from planet Earth. 
-					With plenty of experience in hypersleep, Janek quickly shakes off the bodily distress that comes with it and climbs out of his pod. 
-					He lights up a cigarette and thinks, “Did I really sign up for this mission?” It all sounds like a tale to him. 
-					Along with him were 19 other men and an android, all headed to a planet on which, according to a scientist couple, the creators of humanity might live… 
-					Janek shrugs his doubts off thinking to himself “Well. Whatever. At least it pays some good dough.” And with that, he makes his way to the dining room.
+					It’s Christmas 2089 and Janek has just awoken from his hypersleep of two long years. He is now 35 light-years away from planet Earth.
+					With plenty of experience in hypersleep, Janek quickly shakes off the bodily distress that comes with it and climbs out of his pod.
+					He lights up a cigarette and thinks, “Did I really sign up for this mission?” It all sounds like a tale to him.
+					Along with him were 19 other men and an android, all headed to a planet on which, according to a scientist couple, the creators of humanity might live…
+					Janek shrugs his doubts off thinking to himself<br>
+					“Well. Whatever. At least it pays some good dough.” And with that, he makes his way to the dining room.<br><br>
+
 					Before he starts eating breakfast he takes a box out of his luggage, which contains a plastic Christmas tree. 
 					He starts setting up the tree whilst around him people eat and chat. Janek finds joy in this little task. 
-					Suddenly, a stiff and strict-looking woman walks toward him, she seems confused.
-				    “What the hell is that?” she asks, Janek takes the cigarette out of his mouth and replies, “It’s Christmas, we need holidays to show time is still moving.” 
+					Suddenly, a stiff and strict-looking woman walks toward him, she seems confused. “What the hell is that?” she asks, Janek takes the cigarette out of his mouth and replies, “It’s Christmas, we need holidays to show time is still moving.” 
 					She doesn’t seem amused by his comment and tells him to get ready for the mission briefing which is about to start. 
-					Later, we find out that this mission will reveal all the secrets of humanity’s creation. 
+					Later, we find out that this mission will reveal all the secrets of humanity’s creation.<br><br>
+
 					It’s Christmas 2022 in Rotterdam, I look outside the window onto the street, and I see a big, decorated Christmas tree in front of 
 					the church that’s opposite my parents’ house. Just like Janek’s Christmas tree, it reminds me of the passing of time and the arrival of winter. 
-					“Prometheus” is a sci-fi movie about faith, in which humans look for their creators. 
+					“Prometheus”<sup class="footnote">[28]</sup>is a sci-fi movie about faith, in which humans look for their creators. 
 					The scene’s use of a plastic Christmas tree is quite revealing of possible futuristic scenarios.
 					Hinting at an underlying desire to preserve a tree-like image even in a complete artificial environment.
-					 It also highlights that this tradition is not centred on the tree but rather the symbolism it presents. 
-					 This becomes apparent in the aftermath of Christmas when we witness heaps of discarded trees littering the streets. 
-					 We only care about the tree during the period in which it holds meaning for us.
+					It also highlights that this tradition is not centred on the tree but rather the symbolism it presents. 
+					This becomes apparent in the aftermath of Christmas when we witness heaps of discarded trees littering the streets. 
+					We only care about the tree during the period in which it holds meaning for us.
+					<br><br>
 					Where does this tradition come from? We think that the early Romans, Vikings, and other ancient civilisations, 
 					decorated their homes with boughs of evergreen trees, which retain their green leaves throughout all seasons. 
 					They celebrated the solstice, the shortest day of the year, because it marked the day the sun was coming back, 
-					and all the green plants would soon grow again.  The evergreens became a symbol of life over death, fertility, and victory. 
+					and all the green plants would soon grow again.<sup class="footnote">[29]</sup>The evergreens became a symbol of life over death, fertility, and victory.<sup class="footnote">[30]</sup>
 					The Christmas tree is not the only evergreen symbol we put up in our homes during Christmas. 
 					The mistletoe is another one. Kissing underneath a mistletoe is a tradition that most likely stems from the Celtic Druids. 
-					Because of their ability to blossom all year round, mistletoe became a symbol of fertility . 
+					Because of their ability to blossom all year round, mistletoe became a symbol of fertility.<sup class="footnote">[31]</sup>
 					The mistletoe is a parasite that needs a host tree to survive. If there are too many mistletoes on a tree, the tree might not survive. 
-					For us it’s a symbol of life, for the tree it’s a possible sign of death. 
+					For us it’s a symbol of life, for the tree it’s a possible sign of death.<br><br>
+
 					Trees appear green due to the process of photosynthesis which involves the pigment chlorophyll. 
 					Chlorophyll is responsible for the green colour of plants, in our eyes. Photosynthesis is a biological process that produces oxygen, 
 					making green truly the colour of life. Therefore, admiring the green colour of plants for its life-giving properties sounds very logical.
-					About 2500 years ago the Greeks identified air, much later in 1774 Joseph Priestly identified oxygen, recognizing that air is a consumed. 
+					About 2500 years ago the Greeks identified air, much later in 1774 Joseph Priestly identified oxygen, recognizing that air can be consumed.<sup class="footnote">[32]</sup>
 					It’s an interesting note that humans chose trees, especially evergreens, as symbol of life, even though they didn’t know that trees literally provide life.
-					Conversely, green is also the most toxic colour. The pigment Emerald Green was introduced by Carl Wilhelm Scheele in 1775 , 
-					which contains the highly poisonous copper arsenide and cause various illnesses. Green is thus the colour of both life and death. 
+					Conversely, green is also the most toxic colour. The pigment Emerald Green was introduced by Carl Wilhelm Scheele in 1775<sup class="footnote">[33]</sup> , 
+					which contains the highly poisonous copper arsenide and cause various illnesses.<br><br>
+					Green is thus the colour of both life and death. 
 					But green trees will not remain green forever and will eventually die. 
 					Expect for Janek’s Christmas tree, this small plastic tree who travelled for many years in a box in the packing area of a spaceship is 
 					something I would like to call a “Forever-green”. 
+					<div class="link1"><a href="https://www.imdb.com/title/tt1446714/">[28]</a>&nbsp;&nbsp;&nbsp;Scott, Ridley, Prometheus, 2012</p></div>
+					<div class="link1"><a href="https://www.history.com/topics/christmas/history-of-christmas-trees">[29]</a>&nbsp;&nbsp;&nbsp;History.com, History of the Christmas tree, 2009</p></div>
+					<div class="link1"><a href="https://mftpodcast.com/tag/california/">[30]</a>&nbsp;&nbsp;&nbsp;Podcast, My Favorite Trees, Ep 60- The Date Palms</p></div>
+					<div class="link1"><a href="https://www.history.com/news/why-do-we-kiss-under-the-mistletoe">[31]</a>&nbsp;&nbsp;&nbsp;History.com, Why Do We Kiss Under the Mistletoe? 2013 </p></div>
+					<div class="link1"><a href="https://www.acs.org/education/whatischemistry/landmarks/josephpriestleyoxygen.html">[32]</a>&nbsp;&nbsp;&nbsp;Acs.org, Joseph Priestly and the Discovery of Oxygen</p></div>
+					<div class="link1"><a href="https://laafa.edu/poisonous-pigments-scheeles-green/">[33]</a>&nbsp;&nbsp;&nbsp;Laada.edu, Poisonous pigments: Scheele’s Green, 2018</p></div>
 		</p>
 	</h3>				
 </div>
 
-<div class="Dunes" data-aos="zoom-in" data-aos-easing="ease-in-out-sine"></div>
+<div class="tree3" data-aos="zoom-in" data-aos-easing="ease-in-out-sine"><img src="content/tree3.png"></div>
+
+<div class="Datepalms">	<video autoplay muted loop>
+	<source src="content/paul.mp4" type="video/mp4"></video></div>
+
+<div class="Dunes" data-aos="zoom-in" data-aos-easing="ease-in-out-sine"><img src="content/tree9.png"></div>
 
 
 <div class="Dune">
-	<a id="chapter-4"><h1 id="Chapter3">When green trees turn brown</h1></a>
-			<h3>
-				<p>
-					The unforgiving planet of Arrakis, more commonly known as Dune, was a place where temperatures could rise to 60 degrees Fahrenheit, 
-					making it impossible for any human to survive without adequate protection. Devoid of any appearance of plant life, Dune holds only a single, prized resource: Spice. 
-					This psychoactive drug holds the power to prolong life and supports space travel. 
-					Paul, the young duke of the ruling family Atreides, has just arrived on Dune, tasked with the responsibility of overseeing the spice fields. 
-					Born and raised on the lush paradise planet of Caladan, Paul was a stranger to the unforgiving landscape of Dune, where even the sight of a single plant was a rarity. 
-					It was on a stroll through the gardens of his residence that Paul first noticed the date palms.
-					“I didn’t know date palms can be found out here.” Paul says to the man. 
-					“Oh… These aren’t indigenous. They can’t survive without me…” he continues.
- 					“Each one of these drinks every day the equivalent of five man… Twenty palm trees… 
-					A hundred lives…” 
-					Paul frowns. “Should we remove them? Save the water.”
-					“No, no, no!” The man says immediately “These are sacred.” 
-					He touches the bark of the palm and looks at Paul “Old dream.”  
-					In the movie, the dream is not further elaborated. The most logical connection to what this dream might be is probably the dream of more water, 
-					which could Dune more bearable. In the book Dune  (SPOILER ALERT) the local population (the Fremen) believes in a lost paradise, referring to the belief 
-					that Dune once was a fertile and lush world. This is the reason why, unlike in the movie, the Fremen despised the palm trees, which waste precious water resources. 
-					Without the Fremen’s knowledge, higher powers intentionally keep water resources to maintain control and power over them. 
-					This power game results in a literal loss of paradise, where no plants and trees can grow, and humans must drink their own sweat to stay alive. 
-					Intentionally altering a planet to make it more hospitable for human life (or in the case of Dune, less hospitable) is called “terraforming”. 
-					The loss of Dune’s paradise can be seen as a cautionary tale of the potential consequences of human intervention in the natural world.
-					Dates are highly nutritious, making them a blessing in the harsh environment of the desert. 
-					The date palm tree has been referenced in ancient civilisations and mentioned in various religions. As date palm are part of the Evergreen family, 
-					they hold the same type of symbolic value as other Evergreen species, symbolizing life over death, and victory because of its leaves staying green. 
-					Therefore, using dry brown-looking date palms in Dune might symbolize false hope, a fading of green, the old dream. 
-					Dates are celebrated in all the Abrahamic religions; with slight differences in symbolism, it holds both in the Islamic faith as in 
-					Judaism meanings of prosperity, fertility and in both religions, it has a feminine association with the tree.  
-					The date palm is not the only tree mentioned in the Abrahamic religions. Throughout history, trees have been closely linked to paradise. 
-					In the Abrahamic religions, the Garden of Eden and its trees symbolize an ideal place where everything was once perfect, without sorrow. 
-					Although, the meaning of the garden of Eden varies between the religions, it can be seen as the idyllic state of humanity before the introduction of suffering. 
-					In Dune however, the dried out brown date palms, signify the suffering endured by the local population, indicating the loss of paradise. 
-					This made me think of a TV show I watched called “Sinan op zoek naar het paradijs”   (Sinan searching for paradise). 
-					His journey takes him to Qurna, a city in Iraq, where the mighty river Tigris and Euphrates converge. 
-					Here he discovers a shrine dedicated to a dead tree. The people of Qurna belief that this is the garden of Eden, and the thousand-year-old dead tree is the tree of knowledge. 
-					Although it is not officially recognised site by Islamic authority. As Sinan speaks to a botanist who has devoted his life to take care of the tree, 
-					he learns that the tree was dug out during war and planted somewhere safely. After the conflicts it was planted back in the garden. 
-					Despites being dried out and lifeless, the tree remains a symbol of paradise for the people of Qurna, perhaps a symbol of peace and calmed. 
-					There is a contradiction between these dead trees that are being kept alive, by the population and the respect we have for Treebeards friends and the Christmas trees. 
-					Could it be that the introduction of suffering makes the trees more valuable symbol of paradise? Is brown a more powerful symbolic colour than green? 
-					Life is more celebrated when death comes closer.
-				</p>
-			</h3>
-</div>
-
-<div class="Annihilations" data-aos="zoom-in" data-aos-easing="ease-in-out-sine"></div>
-
-<div class="Annihilation">
-	<a id="chapter-5"><h1 id="Chapter5">A world full of topiaries</h1></a>
-	<h3>
-		<p>
-		K is a Nexus-9 Replicant  and a Blade Runner on the biggest mission of his life. A couple weeks ago, he found a box containing the remains of a female replicant who 
-		had died after giving birth through a c-section. This discovery was impossible, as replicants were not supposed to biologically reproduce, and it could potentially ignite a 
-		devastating war. Thus, K has been tasked with finding and disabling the human-humanoid child that might exist. Desperately searching for any clues, 
-		K comes across a scientist who creates memories for replicants. 
-		K walks into the dream of a forest.
-		In 2049, humans had created bioengineered humanoids known as replicants, who possessed superhuman capabilities and designed for jobs we could not or did not want to do. 
-		However, since humans didn’t give the replicants memories they underdeveloped empathy, what made them dangerous. As such the old replicant species must be wiped out, 
-		a task carried out by a specialized police force known as Blade Runners. 
-		To avoid these problems, humans began creating replicants with human memories. One such memory is of a beautiful green forest, even though the world outside is a desert,
-		dry land, or an industrial city. The dream of a particular type of green flourishing nature was created, a simulacrum, as humans don’t want the replicants to grow up with a “ruined” nature. 
-		We give the replicants these dreams and memories, to make them feel more human. In other words, according to this movie a beautiful green forest is an essential part of humanity. 
-		According to Swiss psychiatrist Carl Jung, trees are one of the archetypes, which are universal symbols, or patterns, that exist in the collective unconscious of the human mind.
-		Carl Jung explored the recurring image of trees in dreams, drawings, fantasies, and the symbolism it held and saw connections in the meaning given to trees, by people of every type of culture. 
-		People who had not any prior knowledge to the symbolism of the tree, gave it the same symbolic values as growth, connection, stability, and nourishment.  
-		In the context of Blade Runner 2049, K. and other humanoids are exposed to a constructed reality, a simulacrum, just as in Aliens, of a peaceful, lush, and vivid forest. 
-		Instead of a dark, dangerous, uncanny forest. Humans are playing with the archetypes.9
-		In the book Annihilation a lighthouse is the epicentre of an “unnatural” force who is slowly expanding. Inside, nature is deforming, annihilated and slowly becomes human. 
-		Dolphins with human eyes, plants with human cells and fungi growing in the shape of human words. Humans themselves become something beyond human. 
-		The alien living in this area, mirrors humans and creates duplicates of the humans it encounters, destroying their original form beyond death. 
-		But in this scenario to estranged for the human fantasy. 
-		Annihilation feels like a metaphor for how the natural world is becoming more and more human, whilst humans themselves are becoming more and more estranged from the natural world and humanity. 
- 		“Does it matter for the physical and psychological well-being of the human species that actual nature is being replaced with technological nature?
-		As the basis for our provisional answer (it is ‘‘yes’’) … The concern is that, by adapting gradually to the loss of actual nature and to the increase of 
-		technological nature, humans will lower the baseline across generations for what counts as a full measure of the human experience and of human flourishing.” 		
+	<a id="Brown"><h1 id="Chapter3">When green trees turn brown</h1></a>
+		<h3>
+			<p>
+				The unforgiving planet of Arrakis, more commonly known as Dune, was a place where temperatures could rise to 60 degrees Fahrenheit, 
+				making it impossible for any human to survive without adequate protection. Devoid of any appearance of plant life, Dune holds only a single, prized resource: Spice. 
+				This psychoactive drug holds the power to prolong life and supports space travel.<br><br>
+				Paul, the young duke of the ruling family Atreides, has just arrived on Dune, tasked with the responsibility of overseeing the spice fields. 
+				Born and raised on the lush paradise planet of Caladan, Paul was a stranger to the unforgiving landscape of Dune, where even the sight of a single plant was a rarity. 
+				It was on a stroll through the gardens of his residence that Paul first noticed the date palms.<br><br>
+				“I didn’t know date palms can be found out here.” Paul says to the man.<br><br>
+				“Oh… These aren’t indigenous. They can’t survive without me…” he continues.
+ 				“Each one of these drinks every day the equivalent of five man… Twenty palm trees… 
+				A hundred lives…”<br><br>
+				Paul frowns. “Should we remove them? Save the water.”<br><br>
+				“No, no, no!” The man says immediately “These are sacred.”<br><br> 
+				He touches the bark of the palm and looks at Paul<br><br> “Old dream.”<sup class="footnote">[34]</sup><br><br>  
+				In the movie, the dream is not further elaborated. The most logical connection to what this dream might be is probably the dream of more water, 
+				which could Dune more bearable. In the book Dune<sup class="footnote">[35]</sup>(SPOILER ALERT) the local population (the Fremen) believes in a lost paradise, referring to the belief 
+				that Dune once was a fertile and lush world. This is the reason why, unlike in the movie, the Fremen despised the palm trees, which waste precious water resources. 
+				Without the Fremen’s knowledge, higher powers intentionally keep water resources to maintain control and power over them. 
+				This power game results in a literal loss of paradise, where no plants and trees can grow, and humans must drink their own sweat to stay alive. 
+				Intentionally altering a planet to make it more hospitable for human life (or in the case of Dune, less hospitable) is called “terraforming”. 
+				The loss of Dune’s paradise can be seen as a cautionary tale of the potential consequences of human intervention in the natural world.
+				Dates are highly nutritious, making them a blessing in the harsh environment of the desert.<br><br>
+				
+				The date palm tree has been <span class="link" onmouseenter="displayImg('content/cultures.png', this); " onmouseout="removeImg();">
+				referenced</span> in ancient civilisations and mentioned in various religions. As date palm are part of the Evergreen family, 
+				they hold the same type of symbolic value as other Evergreen species, symbolizing life over death, and victory because of its leaves staying green. 
+				Therefore, using dry brown-looking date palms in Dune might symbolize false hope, a fading of green, the old dream. 
+				Dates are celebrated in all the Abrahamic religions; with slight differences in symbolism, it holds both in the Islamic faith as in 
+				Judaism meanings of prosperity, fertility and in both religions, it has a feminine association with the tree.<sup class="footnote">[36]</sup>  
+				The date palm is not the only tree mentioned in the Abrahamic religions. Throughout history, trees have been closely linked to paradise. 
+				<br><br>In the Abrahamic religions, the Garden of Eden and its trees symbolize an ideal place where everything was once perfect, without sorrow. 
+				Although, the meaning of the garden of Eden varies between the religions, it can be seen as the idyllic state of humanity before the introduction of suffering.<br>
+				In Dune however, the dried out brown date palms, signify the suffering endured by the local population, indicating the loss of paradise. 
+				<br><br>This made me think of a TV show I watched called “Sinan op zoek naar het paradijs”<sup class="footnote">[37]</sup>(Sinan searching for paradise). 
+				His journey takes him to Qurna, a city in Iraq, where the mighty river Tigris and Euphrates converge. 
+				Here he discovers a shrine dedicated to a dead tree. The people of Qurna belief that this is the garden of Eden, and the thousand-year-old dead tree is the tree of knowledge. 
+				Although it is not officially recognised site by Islamic authority. As Sinan speaks to a botanist who has devoted his life to take care of the tree, 
+				he learns that the tree was dug out during war and planted somewhere safely. After the conflicts it was planted back in the garden. 
+				Despites being dried out and lifeless, the tree remains a symbol of paradise for the people of Qurna, perhaps a symbol of peace and calmed. 
+				There is a contradiction between these dead trees that are being kept alive, by the population and the respect we have for Treebeards friends and the Christmas trees. 
+				Could it be that the introduction of suffering makes the trees more valuable symbol of paradise? Is brown a more powerful symbolic colour than green? 
+				Life is more celebrated when death comes closer.
+				<div class="link1"><a href="https://www.imdb.com/title/tt1160419/">[34]</a>&nbsp;&nbsp;&nbsp;Villeneuve, Dennis. Dune, 2021</p></div>
+				<div class="link1">[35]&nbsp;&nbsp;&nbsp;Herbert, Frank. Dune, 1965</p></div>
+				<div class="link1"><a href="https://mftpodcast.com/tag/california/">[36]</a>&nbsp;&nbsp;&nbsp;Podcast: My favorite Trees, episode 60- The Date palms</p></div>
+				<div class="link1"><a href="https://www.npostart.nl/sinan-op-zoek-naar-het-paradijs/BV_101409513">[37]</a>&nbsp;&nbsp;&nbsp;Npo, Sinan op zoek naar het paradijs episode 4, 2023</p></div>
 		</p>
 	</h3>
 </div>
 
-<div class="Searchings" data-aos="zoom-in" data-aos-easing="ease-in-out-sine"></div>
+<div class="TheSkinI">	<video autoplay muted loop>
+	<source src="content/bonsai_1.mp4" type="video/mp4"></video></div>
 
-<div class="Searching">
-	<a id="chapter-5"><h1 id="Chapter5">searching for paradise</h1></a>
+<div class="Bonsai">
+	<a id="TheSkin"><h1 id="Chapter3">A world full of topiaries</h1></a>
+		<h3>
+			<p>
+				In the movie “La piel que habito” (The skin I live in)<sup class="footnote">[38]</sup>, a plastic surgeon named Robert Ledgard, was working on something extraordinary,
+				an artificial skin that could resist even the most severe burns and insect bites. But he had a dark secret. He conducted illegal experiments on humans, and for this, 
+				he has been forbidden from continuing his research. One day something terrible happened, his daughter was raped by a young man named Vincente. She was so traumatized by 
+				this event that she took her own life. Out of revenge Robert kidnaps Vincente and started experimenting on him, giving him a sex change, and carrying out many skin 
+				experiments.<br><br>In the scene above we see Robert carefully working on one of his bonsai trees. Whilst inside his house, a deeply unhappy hostage guinea pig is living in imprisonment. 
+				The bonsai tree becomes a symbol of the controlling behaviour from the surgeon and is put in the same light as the human.
+				The use of this tree can be seen as a hard criticism of human controlling behaviour.<br><br>
+				The bonsai tree is a normal tree, that is made small by humans. When you stop taking care of it,
+				it will grow back into a full-grown tree. We keep it small by cutting the roots and restricting its growth by using iron thread. With these threads we also can determine the direction 
+				the branches’ grow, copying the branch growth of larger trees and mimicking the hardship that tree has gone through. Bonsai trees are small because they have fewer cells in their leaves, 
+				but the cells are bigger, sometimes even bigger than their counterparts. This is an effect of cutting the roots and lack of nutrients.<sup class="footnote">[39]</sup>The Bonsai tree is the ultimate example of a pet tree.
+				The controlling behaviour of the human. But in what way do Bonsai trees differ from other trees in our surroundings?<br><br>
+				Trees in cities are genetically selected to be able to survive in the city environment. In The Netherlands these trees monitored and checked by the government, 
+				and it is prohibited to plants trees yourself. Our landscapes are completely monitored. In the first chapter I explain that there are no real natural forests left 
+				in Europe but as well in the rainforests. Since humanity has been deforesting for so many years, most of our forests are now planted and controlled by humans. 
+				<br><br>
+				“The cumulative effect of human alteration has been so pervasive and so great that the celebrated palaeoecologist, Faegri, recently claimed that even in Scandinavia, often regarded as a wilderness outpost, 
+				a virgin landscape has been “a fiction” since the Neolithic. Rather it was a “cultural landscape” in which “with some small and doubtful exceptions all vegetation types were created or modified by man”. 
+				The story is similar for the tropical forests.”<sup class="footnote">[40]</sup>
+				<br><br>
+				In the first century BCE, Roman engineer Vitruvius wrote that trees were the original source of inspiration for columns, integrating them into the urban landscape.<sup class="footnote">[41]</sup>
+				And today we simply cannot imagine our cities without trees. But it wasn’t always this way. For example, in some New York neighbourhoods in the 19th century, there were little to no trees.  
+				It wasn’t until around 1870 when physician Stephen Smith made a case for introducing more trees in urban areas. According to him, trees would prevent outbreaks of diseases. 
+				Trees influence the climate in a city, regulate heat and therefore help prevent infections.<sup class="footnote">[42]</sup>They do this primarily via shading, transpiration, and albedo.<sup class="footnote">[43]</sup>
+				<br><br>
+				Trees got integrated into urban areas, due to their health and social benefits. Although cities are not a natural environment for trees.
+				To survive, trees had to be hybridized to become capable of living in a city.<sup class="footnote">[44]</sup>
+				This involve cutting of the roots and adapting them to city soil, they are also being monitored on their health every now and then.
+				
+				While urban trees, offer us numerous benefits, such as healthier and happier living conditions, they can be considered lonely trees. 
+				Due to root cutting and the soil conditions in cities, trees have a hard time communicating with each other, are completely on their own.
+				They don’t have mother trees to nourish them or warn them for impending danger. Urban trees don’t grow very old (average 30 years) and the increasing temperatures 
+				in cities may make their survival even more challenging. In the future, it is possible that some trees may require more frequent human intervention to survive, similar to the date palm scene depicted in Dune.<br><br>
+				
+				
+				Humans like to take control over trees, not only as an art form but we also take control over forests and urban trees. We are creating a world full of imitation trees, 
+				topiaries that are created to server our aesthetic and functional needs. 
+				In the artwork “Parallel”<sup class="footnote">[45]</sup>by Harun Farocki, the analysis of natural environment in games is explored.
+				In games trees are a common form of decoration, and often used ad obstacles or background elements. They are comparable to non-playable characters they very often don’t 
+				do anything for story, they are just there, a background noise.<br><br>
+				
+				In games we are creating a simulacra that is recognisable for the human as an alternate reality by copying and mirroring the world around us. 
+				Trees are an important factor of making such a digital environment recognizable. Understanding the upside, and downside of a digital world. In game world characters don’t need oxygen to survive, 
+				and trees are planted solely for the purpose of referencing our idea of reality. Humans have complete control over the creation of these digital trees from deciding in what direction they move with
+				the wind, their growth rate, direction of their branches grow, height and even if they are (for)evergreens. We are creating the trees of our dreams.<br><br>
+				
+				“What is certain, however, is that humans were conscious of their power to control and even ‘create’ nature. In the words of Sophocles, through their inventions and energy they had become “clever beyond all dreams”.”<sup class="footnote">[46]</sup>
+				
+				<div class="link1"><a href="https://www.imdb.com/title/tt1189073/">[38]</a>&nbsp;&nbsp;&nbsp;Almodóvar, Pedro. The Skin I Live In, 2011</p></div>
+				<div class="link1"><a href="https://www.youtube.com/watch?v=jxg-N7Ld3H0">[39]</a>&nbsp;&nbsp;&nbsp;The biology beshind the Bonsai</p></div>
+				<div class="link1"><a href="http://geography.fullerton.edu/taylor/enst595t/darkages.pdf">[40]</a>&nbsp;&nbsp;&nbsp;Williams, Michael. Dark ages and dark ares: global deforestation in the deep past, 2000, P.29</p></div>
+				<div class="link1"><a href="https://www.jstor.org/stable/26991515">[41]</a>&nbsp;&nbsp;&nbsp;Anderson, Phyllis, How Trees were urbanized, 2020</p></div>
+				<div class="link1"><a href="https://theconversation.com/not-so-long-ago-cities-were-starved-for-trees-109553">[42]</a>&nbsp;&nbsp;&nbsp;An article by Dümpelmann, Sonja about her book “Seeing Trees”, 2019</p></div>
+				<div class="link1"><a href="https://www.nature.com/articles/s41467-021-26768-w">[43]</a>&nbsp;&nbsp;&nbsp;Schwaab, Jonas. Meier, Ronny. Mussetti, Gianluca, Seneviratne, Sonia. Bürgi, Christine. Davin, L. Davin. The role of urban trees in reducing laned surface temperatures in European cities, 2021</p></div>	
+				<div class="link1"><a href="https://www.jstor.org/stable/26991515">[44]</a>&nbsp;&nbsp;&nbsp;Anderson, Phyllis, How Trees were urbanized, 2020</p></div>	
+				<div class="link1"><a href="https://www.harunfarocki.de/installations/2010s/2012/parallel.html">[45]</a>&nbsp;&nbsp;&nbsp;Farocki, Harun. Parallel</p></div>
+				<div class="link1"><a href="http://geography.fullerton.edu/taylor/enst595t/darkages.pdf">[46]</a>&nbsp;&nbsp;&nbsp;Williams, Micheal. Dark ages and dark areas: global deforestation in the deep past, 2000, P. 34</p></div>
+		</p>
+	</h3>
+</div>
+
+<div class="Aworld" data-aos="zoom-in" data-aos-easing="ease-in-out-sine"><img src="content/tree2.png"></div>
+
+<div class="Bladerunner"><video autoplay muted loop>
+<source src="content/Y2Mate.is - Blade Runner 2049 - Memory Facility Scene 4K-oHiVu4wNo64-1080p-1654479153569.mp4" type="video/mp4"></video></div>
+
+<div class="Annihilations" data-aos="zoom-in" data-aos-easing="ease-in-out-sine"><img src="content/tree8.png"></div>
+
+<div class="Annihilation">
+<a id="Blade"><h1 id="Bonsai">Annihilation</h1></a>
 	<h3>
 		<p>
-			“Two world trends are powerfully reshaping human existence, the degradation of large parts of the natural world, un unprecedented technological developments.”<br>
+		K is a Nexus-9 Replicant<sup class="footnote">[47]</sup>and a Blade Runner on the biggest mission of his life. A couple weeks ago, he found a box containing the remains of a female replicant who 
+		had died after giving birth through a c-section. This discovery was impossible, as replicants were not supposed to biologically reproduce, and it could potentially ignite a 
+		devastating war. Thus, K has been tasked with finding and disabling the human-humanoid child that might exist. Desperately searching for any clues, 
+		K comes across a scientist who creates memories for replicants.<br><br>
+		K walks into the dream of a forest.<br><br>
+		In 2049, humans had created bioengineered humanoids known as replicants, who possessed superhuman capabilities and designed for jobs we could not or did not want to do. 
+		However, since humans didn’t give the replicants memories they underdeveloped empathy, what made them dangerous. As such the old replicant species must be wiped out, 
+		a task carried out by a specialized police force known as Blade Runners.<br> 
+		To avoid these problems, humans began creating replicants with human memories. One such memory is of a beautiful green forest, even though the world outside is a desert,
+		dry land, or an industrial city. The dream of a particular type of green flourishing nature was created, a simulacrum, as humans don’t want the replicants to grow up with a “ruined” nature. 
+		We give the replicants these dreams and memories, to make them feel more human. In other words, according to this movie a beautiful green forest is an essential part of humanity. 
+		<br><br>
+		According to Swiss psychiatrist Carl Jung, trees are one of the archetypes, which are universal symbols, or patterns, that exist in the collective unconscious of the human mind.
+		Carl Jung explored the recurring image of trees in dreams, drawings, fantasies, and the symbolism it held and saw connections in the meaning given to trees, by people of every type of culture. 
+		People who had not any prior knowledge to the symbolism of the tree, gave it the same symbolic values as growth, connection, stability, and nourishment.<sup class="footnote">[48]</sup>  
+		In the context of Blade Runner 2049, K. and other humanoids are exposed to a constructed reality, a simulacrum, just as in Aliens, of a peaceful, lush, and vivid forest. 
+		Instead of a dark, dangerous, uncanny forest. Humans are playing with the archetypes.<br><br>
+		In the book Annihilation<sup class="footnote">[49]</sup> a lighthouse is the epicentre of an “unnatural” force who is slowly expanding. Inside, nature is deforming, annihilated and slowly becomes human. 
+		Dolphins with human eyes, plants with human cells and fungi growing in the shape of human words. Humans themselves become something beyond human. 
+		The alien living in this area, mirrors humans and creates duplicates of the humans it encounters, destroying their original form beyond death. 
+		But in this scenario to estranged for the human fantasy. 
+		Annihilation feels like a metaphor for how the natural world is becoming more and more human, whilst humans themselves are becoming more and more estranged from the natural world and humanity.
+		<br><br>
+ 		“Does it matter for the physical and psychological well-being of the human species that actual nature is being replaced with technological nature?
+		As the basis for our provisional answer (it is ‘‘yes’’) … The concern is that, by adapting gradually to the loss of actual nature and to the increase of 
+		technological nature, humans will lower the baseline across generations for what counts as a full measure of the human experience and of human flourishing.”<sup class="footnote">[50]</sup>
+		<div class="link1"><a href="https://www.imdb.com/title/tt1856101/">[47]</a>&nbsp;&nbsp;&nbsp;Villeneuve, Dennis. Blade Runner 2049, 2017</p></div>
+		<div class="link1"><a href="https://bahai-library.com/liya_trees_symbols_religions">[48]</a>&nbsp;&nbsp;&nbsp;Liya, Sally. The Use of Trees as Symbols in the World, 2003, p. 42</p></div>
+		<div class="link1">[49]&nbsp;&nbsp;&nbsp;Vandermeer, Jeff. Annihilation, 2014</p></div>
+		<div class="link1"><a href="https://www.academia.edu/14911038/The_Human_Relation_With_Nature_and_Technological_Nature">[50]</a>&nbsp;&nbsp;&nbsp;H. Kahn Jr, Peter , Severson,  Jane L. , Ruckert, Jolina H. The Human Relation With Nature and Technological Nature, 2009</p></div>
+		</p>
+	</h3>
+</div>
+
+<div class="Searchings" data-aos="zoom-in" data-aos-easing="ease-in-out-sine"><img src= "content/tree6.png"></div>
+
+<div class="Searching">
+	<a id="Searching"><h1 id="Chapter5">searching for paradise</h1></a>
+	<h3>
+		<p>
+			“Two world trends are powerfully reshaping human existence, the degradation of large parts of the natural world, un unprecedented technological developments.”<sup class="footnote">[51]</sup><br>
 			<br><br>
-			“Many of these trees were my friends.” discusses deforestation and the destruction of social networks of trees and ecosystems.<br> 
+			“Many of these trees were my friends.” discusses deforestation and the destruction of social networks of trees and ecosystems. 
 			The movies I have chosen to show a sense of awareness of our actions, as humanoid forest creatures like Ents and animal spirits fight against the exploiters and destroyers of the forests. 
-			These movies serve as a warning for us to protect ourselves against ourselves. They play with a type of anticipatory nostalgia, mourning the loss of the future.
-			Deforestation is not a new phenomenon; humans have been manipulating and cultivating the natural world for a very long time. <br>
-			Christianity and other religions have further justified this relationship, positioning humans above other beings in nature. <br>
-			Over time, the imagery of green trees and lush forests has become a symbol of humanity’s power and intelligence in shaping it’s environment, and making life more comfortable.<br>
-			In the“Forever-Greens”. I explore the symbolism of green trees in human culture, such as the use of evergreen trees during Christmas as a symbol of life, victory, and fertility. <br>
+			These movies serve as a warning for us to protect ourselves against ourselves. They play with a type of anticipatory nostalgia, mourning the loss of the future.<br>
+			Deforestation is not a new phenomenon; humans have been manipulating and cultivating the natural world for a very long time. 
+			Christianity and other religions have further justified this relationship, positioning humans above other beings in nature. 
+			Over time, the imagery of green trees and lush forests has become a symbol of humanity’s power and intelligence in shaping it’s environment, and making life more comfortable.
+			<br><br>In the“Forever-Greens”.I explore the symbolism of green trees in human culture, such as the use of evergreen trees during Christmas as a symbol of life, victory, and fertility. 
 			However, as seen in the movie Prometheus, a plastic Christmas tree represents time instead of being valued as living organism,
 			highlighting a shift towards valuing the symbolism of the tree over the tree itself as a living entity.
 			But green trees die, in “When green trees become brown” I discuss the value of date palms in the movie Dune, 
-			where they are worth more than human life due to their representation of paradise on a desert planet.
+			where these palms are worth more than human life due to their representation life and thus paradise on a harsh desert planet.
 			This contrasts with Treebeard’s friends, and even Christmas trees, where deforestation leads to the destruction of ecosystems. 
 			In Dune and Abrahamic religions, trees become symbols of life and death, and the loss of paradise reflected in the portrayal of brown, dying trees. In the science fiction movies, 
 			I’ve selected for this thesis we often see humans struggling to survive on planets that have harsh living conditions. 
 			The placements of trees in those movies are a smart symbolism towards the comfortable life that trees give us. Though, it is not often about the trees themselves, but more about the symbolism.
 			This might be a reason of why our modern culture uses a particular type of imagery that has become a reality of its own, a beautiful phenomenon. A hyperreality.
-			But what do people do to create this hyperreality? 
+			But what do people do to create this hyperreality?<br><br>
 			“A world full of topiaries” explores humans’ obsessive behaviour towards their surroundings. 
 			In “The Skin I Live In,” the surgeon’s use of a human guinea pig for the experimentation is metaphorically represented by the manipulation and control of a Bonsai tree. 
 			Trees in cities and forests are also subject to human control, creating “A world full of topiaries.”
-			Where trees in cities have become a decorative element that blends in as white noise. 
-			Similarly, in games, trees are used as a resemblance of the real world and have often no purpose other than decoration.
+			Where trees in cities have become a decorative element that blends in, as white noise. 
+			Similarly to games, where trees are used as a resemblance of the real world and have often no purpose other than decoration.
 			In “Annihilation” I delve into the idea of whether digital representations of nature help us connect to our humanity, according to blade runner 2049, 
-			with non-human humanoids fed memories of idyllic forests as a way of playing with the archetypes. 
+			with non-human humanoids fed memories of idyllic forests in order to make them feel more humen, playing with the archetypes. 
+			<br><br>
 			Throughout history, humanity has strived to make life more comfortable. This had led to countless technological advancements and modifications. 
 			The imagery of a natural world with lush trees and forests, has become a symbol of comfortability and humanity’s power and intelligence in controlling and shaping of its environment.
-			In modern times, this image resembles more a hyperreality, whre 
+			In modern times, this image resembles more a hyperreality. 
 			As we continue our journey onwards, we must remember the importance of the natural world, and our connection to it.
 			The trees, the forests, and all of nature must be appreciated for their inherent worth, not just for the comfort they provide us. 
 			Only then we might find our way back to paradise. 	
+			<div class="link1"><a href="https://www.academia.edu/14911038/The_Human_Relation_With_Nature_and_Technological_Nature">[51]</a>&nbsp;&nbsp;&nbsp;H. Kahn Jr, Peter , Severson,  Jane L. , Ruckert, Jolina H. The Human Relation With Nature and Technological Nature, 2009</p></div>
 		</p>
 	</h3>
 </div>
-
 <div class="Searching2" data-aos="zoom-in" data-aos-easing="ease-in-out-sine"></div>
 
-<div class="bib"></div>
+<div class="bib">
+	<a id="bib"><h1 id="bib">Bibliography</h1></a>
+<p><h3>
+Books:<br>
+1.	Van Mensvoort, Koert. Next Nature, 2019<br>
+2.	Simmard, Suzanne. Finding the Mother tree,<br>
+3.	Wohlleben, Peter. The hidden life of trees, 2016<br>
+4.	Herbert, Frank. Dune, 1965<br>
+5.	Vandermeer, Jeff. Annihilation, 2014<br>
+<br>Papers:<br>
+<a href="https://www.researchgate.net/publication/337032532_Art_Cinema_and_Society_Sociological_Perspectives">1.	Nascimento, Jonas Do. Art, Cinema And Society: Sociological Perspectives, 2019</a><br>
+<a href="https://www.nature.com/articles/s41599-020-0390-y">2.	Ducarme, Frédéric. Couvet, Denis. What does ‘nature’ mean?, 2020</a><br>
+<a href="https://link.springer.com/article/10.1007/s11629-020-6221-1">3.	Hansson, Amanda. Dargusch, Paul. Schulmeister, Jamie. A review of modern treeline migration, the factors controlling it and the implications for carbon storage, 2021</a><br>
+<a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/ele.12889">4.	Stevens-Rumann, Camille S. Kemp, Kerry B. Higuera, Philip E. Harvey, Brian J. Rother, Monica T. Donato, Daniel C. Penelope, Morgan. Veblen, Thomas T. Evidence for declining forest resilience to wildfires under climate change, 2017</a><br>
+<a href="https://ourworldindata.org/deforestation">5.	Ourworldindata.org, Ritchie, Hannah. Roser, Max. Deofrestation and forest loss, 2021</a><br>
+<a href="http://geography.fullerton.edu/taylor/enst595t/darkages.pdf">6.	Williams Micheal, Dark ages and dark areas: global deforestation in the deep past, 2000</a><br>
+<a href="https://www.fao.org/forest-resources-assessment/2020/en/">7.	Food and Agriculture Organization of the United Nations, Global Forest Resources Assessment 2020 Key Findings, 2020</a><br>
+<a href="https://www.nature.com/articles/s41467-021-26768-w">8.	Schwaab, Jonas. Meier, Ronny. Mussetti, Gianluca, Seneviratne, Sonia. Bürgi, Christine. Davin, L. Davin. The role of urban trees in reducing laned surface temperatures in European cities, 2021</a><br>
+<a href="https://bahai-library.com/liya_trees_symbols_religions">9.	Liya, Sally. The Use of Trees as Symbols in the World, 2003, p. 42</a><br>
+<a href="https://www.academia.edu/14911038/The_Human_Relation_With_Nature_and_Technological_Nature">10.	H. Kahn Jr, Peter , Severson,  Jane L. , Ruckert, Jolina H. The Human Relation With Nature and Technological Nature, 2009</a><br><br>
+Articles:<br>
+<a href="https://mothertreeproject.org/#:~:text=The%20Mother%20Tree%20Project%20explores,various%20harvesting%20and%20regeneration%20treatments.">1. Mother Tree Project, About mother trees in the forest</a><br>
+<a href= "https://www.theguardian.com/news/2022/jan/20/norway-arctic-circle-trees-sami-reindeer-global-heating#:~:text=As%20the%20planet%20warms%2C%20the,to%2050%20metres%20a%20year">2.	Treeline moving up more North</a> <br>
+<a href= "https://www.science.org/content/article/ecosystems-could-once-bounce-back-wildfires-now-they-re-being-wiped-out-good#:~:text=From%20such%20ashes%2C%20ecosystems%20usually,out%20entire%20ecological%20communities%20forever.">3.	Science.org, Ecosystems could once bounce back from wildfires. Now, they’re being wiped out for good,</a><br>
+<a href="https://www.cfr.org/amazon-deforestation/#/en">4.	CFR.org, Deforestation in the Amazon</a><br>
+<a href="https://www.wwf.org.uk/where-we-work/amazon">5.	WWF.org.uk, The amazon About the Amazonian rainforest</a><br>
+<a href="https://www.theguardian.com/news/2022/jan/20/norway-arctic-circle-trees-sami-reindeer-global-heating">6.	The Guardian, ‘The treeline is out of control’: how the climate crisis is turning the Arctic green, 2022</a><br>
+<a href="https://www.history.com/topics/christmas/history-of-christmas-trees">7.	History.com, History of the Christmas tree, 2009</a><br>
+<a href="https://www.history.com/news/why-do-we-kiss-under-the-mistletoe">8.	History.com, Why Do We Kiss Under the Mistletoe? 2013</a><br>
+<a href="https://www.acs.org/education/whatischemistry/landmarks/josephpriestleyoxygen.html">9.	Acs.org, Joseph Priestly and the Discovery of Oxygen</a><br>
+<a href="https://laafa.edu/poisonous-pigments-scheeles-green/">10.	Laada.edu, Poisonous pigments: Scheele’s Green, 2018</a><br>
+<a href= "https://theconversation.com/not-so-long-ago-cities-were-starved-for-trees-109553">11.	An article by Dümpelmann, Sonja about her book “Seeing Trees”</a><br>
+<a href="https://www.jstor.org/stable/26991515">12.	Anderson, Phyllis, How Trees were urbanized, 2020</a><br>
+<br>Movies:<br>
+<a href="https://www.imdb.com/title/tt0090605/">1.	Cameron, James. Aliens, 1986</a><br>
+<a href="https://www.imdb.com/title/tt0167261/">2.	Jackson, Peter. Lord of the rings Two Towers, 2002</a><br>
+<a href="https://www.imdb.com/title/tt0119698/">3.	Miyazaki, Hayao. Princess Mononoke, 1997</a><br>
+<a href="https://www.imdb.com/title/tt1446714/">4.	Scott, Ridley, Prometheus, 2012</a><br>
+<a href="https://www.imdb.com/title/tt1160419/">5.	Villeneuve, Dennis. Dune, 2021</a><br>
+<a href="https://www.imdb.com/title/tt1189073/">6.	Almodóvar, Pedro. The Skin I Live In, 2011</a><br>
+<a href="https://www.imdb.com/title/tt1856101/">7.	Villeneuve, Dennis. Blade Runner 2049, 2017</a><br>
+<br>Documentaries:<br>
+1.	The Media Insider, Postmodernism explained for beginners! Jean Baudrillard Simulacra and Hyperreality explained, 2022<br>
+<a href="https://www.youtube.com/watch?v=Un2yBgIAxYs&t=571s">2.	Ted Talk, Simard, Suzanne, 2016.</a><br>
+<a href="https://www.youtube.com/watch?v=e4EqKK9CvD8">3.	ENDVR, The Real Cost of Cheap Wood, 2017.</a><br>
+<a href="https://formafantasma.com/work/cambio">4.	Formafantasma, Cambio, 2020</a><br>
+<a href="https://www.npostart.nl/sinan-op-zoek-naar-het-paradijs/BV_101409513">5.	Npo, Sinan op zoek naar het paradijs episode 4, 2023</a><br>
+<a href="https://www.youtube.com/watch?v=jxg-N7Ld3H0">The biology beshind the Bonsai</a>
+<a href="https://www.harunfarocki.de/installations/2010s/2012/parallel.html">8.	Farocki, Harun. Parallel</a><br>
+<br>Podcast:<br>
+<a href="https://mftpodcast.com/tag/california/">1.	My favorite Trees, episode 60- The Date palms</a><br>
+<br>Images:<br>
+1. Figure 1: Star Trek Holodeck<br>
+2. Figure 2: Ellen Ripley in Aliens<br>
+3. Figure 3: Lord of the rings Two Towers<br>
+<a href="https://www.youtube.com/watch?v=e4EqKK9CvD8">4. Figure 4: Clearcut in virgin forest in Romania, ENDVR, The Real Cost of Cheap Wood, 2017.</a><br>
+5. Figure 5: Princess Mononoke & Lord of the rings Two Towers<br>
+6. Figure 6: Prometheus<br>
+7. Figure 7: Self-made pictures in Rotterdam<br>
+8. Figure 8: Dune<br>
+<a href="https://antiquitynow.org/2013/12/17/the-history-of-the-holiday-evergreen/">9. Figure 9: Tomb painting from the tomb of Pashedu, son of Menna, showing him crouching next to a stream and a date palm in the lower world</a><br>
+<a href="https://www.atlasobscura.com/places/tree-knowledge10">Figure 10: Adam’s tree in Qurna</a><br>
+11. Figure 11: The Skin I Live In<br>
+12. Figure 12: Blade Runner 2049<br>
+</h3>
+</p>
+</div>
 
-<div class="end"></div>
+<div class="end"><h3>The most underrated actor by Alice Vink, special thanks to ...
+</h3></div>
+
+<div class="is-background-gradient"></div>
 
 <script>
-	// const variables
-	const body = document.querySelector('body');
-	const imgContainer = document.createElement('div');
-
-	function displayImg(imgUrl, elt) {
+// const variables
+		const body = document.querySelector('body');
+		const cube = document.querySelector(".cube");
+		const imgContainer = document.createElement('div');
 	
-	// append image container to the body
-	body.appendChild(imgContainer);
+		function displayImg(imgUrl, elt) {
+		
+		// append image container to the body
+		body.appendChild(imgContainer);
+		
+		// Creat an img element with the imgUrl as a src
+		imgContainer.innerHTML = `<img src='${imgUrl}'>`;
 	
-	// Creat an img element with the imgUrl as a src
-	imgContainer.innerHTML = `<img src='${imgUrl}'>`;
+		// Add styles to the image container to make it appear
+		imgContainer.classList.add('displayMe');
+	
+		//POSITIONING
+		//Position the image 40px beneath the hovered link (elt)
+		imgContainer.style.top = (elt.offsetTop + 40) + 'px';
+		//Position the image 40px beneath the hovered link (elt)
+		imgContainer.style.left = elt.offsetLeft + 'px';
+	
+	// Preventing image from getting partly hidden by the right edge of the viewport
+	// distance between the viewport width (without scrollbar) and element's offset left
+	let difference = document.documentElement.clientWidth - elt.offsetLeft;
+	
+	// If that difference is bigger than the size of the image container : position the image relativelt to the viewport's right edge
+	
+	if(difference < 250 ){
+		imgContainer.style.right = '20px';
+		imgContainer.style.left = 'auto';
+	} else {
+		imgContainer.style.left = elt.offsetLeft + 'px';
+	}
+	
+	}
+	function removeImg() {
+		body.removeChild(imgContainer);
+	}
+	
+	/*Get the X, Y, Position when the mouse or touch is clicked/touched down*/
+	function getPosition(e) {
+	  let x, y;
+	  if (e.touches) {
+		x = e.touches[0].pageX;
+		y = e.touches[0].pageY;
+	  } else {
+		x = e.clientX;
+		y = e.clientY;
+	  }
+	  return { x, y };
+	}
+	
+	function startRotate(e) {
+	  const pos = getPosition(e);
+	
+	  /* Adjust the speed of the rotation based on the screen size */
+	  const screenWidth = window.innerWidth;
+	  const screenHeight = window.innerHeight;
+	  const rotationSpeed = Math.min(screenWidth, screenHeight) / 200;
+	
+	  /* Rotate the cube on mouse/touch move */
+	  function moveRotate(e) {
+		const newPos = getPosition(e);
+		cube.style.transform = `
+		  rotateX(${(newPos.y - pos.y) / rotationSpeed}deg)
+		  rotateY(${(newPos.x - pos.x) / rotationSpeed}deg)
+		`;
+		body.style.cursor = "grabbing";
+	  }
+	
+	  window.addEventListener("mousemove", moveRotate);
+	  window.addEventListener("touchmove", moveRotate);
+	
+	  window.addEventListener("mouseup", stopRotate);
+	  window.addEventListener("touchend", stopRotate);
+	
+	  function stopRotate() {
+		window.removeEventListener("mousemove", moveRotate);
+		window.removeEventListener("touchmove", moveRotate);
+		body.style.cursor = "context-menu";
+	  }
+	}
+	
+	/*
+	function releaseCube() {
+	  cube.style.transform = "";
+	}
+	*/
+	
+	/* Add event listener to start and release the cube rotation */
+	
+	window.addEventListener("mousedown", startRotate);
+	window.addEventListener("touchstart", startRotate);
+	
+	/*
+	cube.addEventListener("mousedown", releaseCube);
+	cube.addEventListener("touchstart", releaseCube);
+	*/
+	
+	setInterval(() => {
+	  const currentRotation = cube.style.transform;
+	  const newRotation = `
+		rotateX(${getRotationValue(currentRotation, "rotateX") + 1}deg)
+		rotateY(${getRotationValue(currentRotation, "rotateY") + 1}deg)
+	  `;
+	  cube.style.transform = newRotation;
+	}, 30);
+	
+	function getRotationValue(rotation, axis) {
+	  const regex = new RegExp(`${axis}\\((\\d+)deg\\)`);
+	  const match = rotation.match(regex);
+	  if (match) {
+		return parseInt(match[1]);
+	  } else {
+		return 0;
+	  }
+	}
 
-	// Add styles to the image container to make it appear
-	imgContainer.classList.add('displayMe');
+// Smooth scrolling to anchor links with offset
+$(document).ready(function() {
+  $('a[href^="#"]').on('click', function(event) {
+    var target = $(this.getAttribute('href'));
+    if( target.length ) {
+      event.preventDefault();
+      $('html, body').stop().animate({
+        scrollTop: target.offset().top - 80 // Adjust the offset value to suit your needs
+      }, 1000);
+    }
+  });
+});
 
-	//POSITIONING
-	//Position the image 40px beneath the hovered link (elt)
-	imgContainer.style.top = (elt.offsetTop + 40) + 'px';
-	//Position the image 40px beneath the hovered link (elt)
-	imgContainer.style.left = elt.offsetLeft + 'px';
 
-// Preventing image from getting partly hidden by the right edge of the viewport
-// distance between the viewport width (without scrollbar) and element's offset left
-let difference = document.documentElement.clientWidth - elt.offsetLeft;
-
-// If that difference is bigger than the size of the image container : position the image relativelt to the viewport's right edge
-
-if(difference < 250 ){
-	imgContainer.style.right = '20px';
-	imgContainer.style.left = 'auto';
-} else {
-	imgContainer.style.left = elt.offsetLeft + 'px';
-}
-
-}
-function removeImg() {
-	body.removeChild(imgContainer);
-}
 
 </script>
 
-
-
-<div class="is-background-gradient"></div>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <!-- end webpage content -->
 <script>
@@ -997,6 +816,7 @@ function removeImg() {
 	  duration: 3000
 	});
 </script>
+
 
 </body>
 </html>

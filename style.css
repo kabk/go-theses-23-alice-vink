@@ -795,6 +795,7 @@ footer {
   display: none;
 }
 
+/*
 .wrapper{
   position: absolute;
   width: 100vw;
@@ -950,6 +951,65 @@ object:hover {
     -ms-transform: scale(0.6, 0.6);
     -o-transform: scale(0.6, 0.6);
     transform: scale(0.6, 0.6); } 
+  }
+  */
+
+
+  .wrapper{
+    position: absolute;
+    z-index: 2;
+    top: 30vw;
+    left: 50vw;
+  }
+  
+  .cube {
+    transform-style: preserve-3d;
+    transition: 0.4s;
+    transform: rotateX(36deg) rotateY(-131deg);
+  }
+  
+  .face1, .face2, .face3, .face4, .face5, .face6{
+    width: 7.5em;
+    height: 7.5em;
+    transition: 0.4s;
+    position: absolute;
+  }
+  
+  .face1{
+    background: #eeeeee00;
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+  }
+  
+  .face1-image{
+   
+  }
+  
+  .face2{
+    background: #18181800;
+  }
+  
+  .face3{
+    background:#19d4da00 ;
+    transform: rotateY(90deg);
+    transform-origin: left;
+  }
+  
+  .face4{
+    background: #373a4000;
+    transform: rotateX(-90deg);
+    transform-origin: top;
+  }
+  
+  .face5{
+    background: #686d7600;
+    transform: rotateY(-90deg);
+    transform-origin: right;
+  }
+  
+  .face6{
+    background: #1dd6a800;
+    transform: translate3d(0, 0, -7.5em);
   }
 
 span.link {
