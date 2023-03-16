@@ -25,9 +25,13 @@ table{border-collapse:collapse;border-spacing:0}
 hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
 input,select{vertical-align:middle}
 
-@font-face {
-  font-family: 'FKRomanStandard-Regular';
-  src: url('/go-theses-23-alice-vink/content/FKRomanStandard-Regular.ttf') format('truetype');
+body {
+  position:absolute;
+	height: 100vh;
+  width:100vw;
+  overflow-y:auto;
+  overflow-x: hidden;
+  cursor:default;
 }
 
 
@@ -55,11 +59,10 @@ input,select{vertical-align:middle}
   z-index: 3; 
 }
 
-.logo img{width: 40px;}
-
+.logo img{width: 40px;
+margin: auto;}
 .menu {display: flex;}
-.menu li {padding-left: 50px;
-padding-right: 50px;}
+.menu li {padding-left: 30px;}
 
 .menu li a {
   font-family: 'Lora';
@@ -79,14 +82,13 @@ padding-right: 50px;}
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 0;
+  width: 100%;
   height: 1px;
-  background-color: #ff0000;
+  background-color: #00005700;
   transition: 0.25s ease-in-out;
 }
 
 .menu li a:hover:after {width: 100%;}
-
 .open-menu, .close-menu{
   position: absolute;
   color: #000;
@@ -97,18 +99,18 @@ padding-right: 50px;}
 
 .open-menu{
   top: 50%;
-  right: 20px;
+  right: 60px;
   transform: translateY(-50%);
 }
 
 .close-menu{
   top: 20px;
-  right: 20px;
+  right: 60px;
 }
 
 #check {display: none;}
 
-@media(max-width: 610px){
+@media(max-width: 667px){
   .menu{
     flex-direction: column;
     align-items: center;
@@ -123,21 +125,38 @@ padding-right: 50px;}
     transition: all 3s ease-in-out;
   }
 
-  .menu li {margin-top: 40px;}
+  .menu li {margin-top: 30px;}
   .menu li a{padding: 5px;}
   .open-menu , .close-menu {display: block;}
   #check:checked ~ .menu {right: 0;}
 }
 
+
+
 /* ------------------------------------------------------------------------------------ */
+
+.Abstract {
+  max-width: 20rem;
+  height: auto;
+  background: transparent;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  float: left;
+  position: relative;
+  top: -50px;
+  margin-bottom: 100px;
+  margin-right: 20px;
+  display: flex;
+}
+
 .forest {
   width: 100vw;
   float: left;
   height: 150vh;
   background-color: #ff000000;
   position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 50px;
 }
 
 .forest img {
@@ -214,7 +233,7 @@ padding-right: 50px;}
   /* Color settings */
   --color-background: rgb(215, 214, 215);
   --color-text: 	rgba(255, 255, 255, 0.4);
-  --color-text-link:rgb(61, 35, 4) ;
+  --color-text-link:rgb(17, 18, 90) ;
   --color-text-link-hover: rgb(93, 146, 28);
   /* Font settings */
   --font-family: 'Inter';
@@ -237,11 +256,11 @@ body::-webkit-scrollbar{
 }
 
 .footnote {
-  font-size: 0.5em; /* or any other desired size */
+  font-size: 0.6em; /* or any other desired size */
   margin-left: 0.3em; /* or any other desired spacing */
   font-family: 'Lora';
   font-weight: 400;
-  color: azure;
+  color: rgb(17, 18, 90);
 }
 /* GENERAL STYLES */
 
@@ -252,13 +271,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  position:absolute;
-	height: 100vh;
-  width:100vw;
-  overflow-y:auto;
-  overflow-x: hidden;
-}
 
 
 div.is-background-gradient{
@@ -304,12 +316,12 @@ ul, #myUL {
 
 */
 a {
-  color: rgb(255, 255, 255);
+  color: rgb(18, 78, 190);
   text-decoration: none;
 }
 
 a:hover {
-  cursor: crosshair;
+  cursor:pointer;
   mix-blend-mode:luminosity;
   color: rgba(17, 255, 0, 0.533);
   text-decoration: none;
@@ -334,10 +346,7 @@ a:focus-visible {
 /* ------------------------------------------------------------------------------------ */
 
 .Aliens {
-  margin-left: 19vw;
-  margin-right: 20vw;
-  margin-bottom: 15vw;
-  margin-top: 15vw;
+  margin: auto;
   position: relative;
   z-index: 1;
   width: 60%; 
@@ -346,7 +355,6 @@ a:focus-visible {
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   object-fit: fill;
-  float: left;
 } 
 
 .Aliens video {
@@ -390,9 +398,9 @@ a:focus-visible {
   overflow:scroll;
   float: right;
   position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-right: 10px;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  margin-right: 20px;
   display: flex;
 }
 
@@ -402,10 +410,11 @@ a:focus-visible {
   height: 30rem;
   background-color: #88888800;
   position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 200px;
+  margin-bottom: 200px;
   margin-left: 10px;
   z-index: 0;
+
 }
 
 .image12 img {
@@ -416,19 +425,20 @@ a:focus-visible {
 }
 
 @media (max-width: 767px) {
-  .image12 {
-    width: 100vw;
-    float: left;
-    height: auto;
-    margin: 20px auto 20px 20px;
-    position: relative;
+    .image12 {
+      width: 100vw;
+      float: left;
+      height: 120vh;
+      margin: 20px auto 20px 20px;
+      position: relative;
+      right: 20px;
+    
+    }
+  
+    .image12 img {
+      margin-top: 50px;
+    }
   }
-
-  .image12 img {
-    margin-top: 50px;
-
-  }
-}
 
 /* ------------------------------------------------------------------------------------ */
 /* CHAPTER1*/
@@ -447,8 +457,8 @@ a:focus-visible {
   overflow:scroll;
   float: left;
   position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 200px;
+  margin-bottom: 200px;
   display: flex;
   box-shadow: #000000;
 }
@@ -456,8 +466,8 @@ a:focus-visible {
 .LordOfTheRings{
   width: 60%; 
   height: auto;
-  position: relative;
-  
+  margin: auto;
+  position: relative; 
   z-index: 1;
   border-radius: 50%;
   overflow: hidden;
@@ -479,8 +489,7 @@ a:focus-visible {
     width: 90%;
     height: 200px;
     border-radius: 0;
-    margin-left: 25px;
-    margin-right: 0;
+  margin: auto;
     border-radius: 50%;
   }
   .LordOfTheRings video {
@@ -521,9 +530,9 @@ a:focus-visible {
   height: 30rem;
   background-color: #88888800;
   position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 10px;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  margin-left: 20px;
   z-index: 0;
 }
 
@@ -541,6 +550,8 @@ a:focus-visible {
     height: 120vh;
     margin: 20px auto 20px 20px;
     position: relative;
+    right: 20px;
+  
   }
 
   .Pmon img {
@@ -548,19 +559,17 @@ a:focus-visible {
   }
 }
 
-
 /*-----------------------------------------------------------------------------------------------------------------*/
 
 
 .Pmon2{
   width: 50%;
   float: left;
-  height: 30rem;
+  height: 18rem;
   background-color: #88888800;
   position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 10px;
+  margin-bottom: 200px;
+  margin-left: 20px;
   z-index: 0;
 }
 
@@ -572,61 +581,77 @@ a:focus-visible {
 }
 
 @media (max-width: 768px) {
-  .Pmon2 {
-    width: 100vw;
-    float: left;
-    height: 120vh;
-    margin: 20px auto 20px 20px;
-    position: relative;
+    .Pmon2 {
+      width: 100vw;
+      float: left;
+      height: 120vh;
+      margin: 20px auto 20px 20px;
+      position: relative;
+      right: 20px;
+    
+    }
+  
+    .Pmon2 img {
+      margin-top: 50px;
+    }
   }
-
-  .Pmon2 img {
-    margin-top: 50px;
-  }
-}
 
 /*-----------------------------------------------------------------------------------------------------------------*/
 
 
-.HumanTree::-webkit-scrollbar{
-  display: none;
-}
-
 .HumanTree{
   max-width: 20rem;
-  height: 30rem;
+  height: 18rem;
   background-color: #ff000000;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
-  overflow:scroll;
   float: right;
   position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 200px;
+  margin-right: 20px;
   display: flex;
 }
 
+/*-----------------------------------------------------------------------------*/
+
 .Prome{
-  width: 1280px; 
-  height: 720px;
-  position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 10vw;
-  margin-right: 10vw;
+  width: 60%; 
+  height: auto;
+  margin: auto;
+  position: relative; 
   z-index: 1;
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   object-fit: fill;
+  background-color: black;
 }
 
 .Prome video{
+  position: relative;
   width: 100%;
   height: 100%;
   justify-content: center;
   object-fit: fill;
+}
+
+@media (max-width: 767px){
+  .Prome {
+    width: 90%;
+    height: 200px;
+    border-radius: 0;
+    margin-left: 25px;
+    margin-right: 0;
+    border-radius: 50%;
+  }
+  .Prome video {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    object-fit: fill;
+    top: 3px;
+  }
 }
 
 /*-----------------------------------------------------------------------------*/
@@ -646,8 +671,8 @@ a:focus-visible {
   float: left;
   margin-left: 20px;
   position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 200px;
+  margin-bottom: 200px;
   display: flex;
 }
 
@@ -659,9 +684,9 @@ a:focus-visible {
   height: 30rem;
   background-color: #88888800;
   position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 10px;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  margin-left: 20px;
   z-index: 0;
 }
 
@@ -679,6 +704,8 @@ a:focus-visible {
     height: 120vh;
     margin: 20px auto 20px 20px;
     position: relative;
+    right: 20px;
+  
   }
 
   .tree3 img {
@@ -691,30 +718,45 @@ a:focus-visible {
 /*-----------------------------------------------------------------------------*/
 
 .Datepalms{
-  width: 1280px; 
-  height: 720px;
-  float: left;
-  position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 10vw;
-  margin-right: 10vw;
+  width: 60%; 
+  height: auto;
+  margin: auto;
+  position: relative; 
   z-index: 1;
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  object-fit: fill;
+  background-color: black;
 }
 
 .Datepalms video{
   position: relative;
-  left: 0;
-  width: 1950px;
-  height: 1390px;
-  height: auto;
+  width: 100%;
+  height: 100%;
   justify-content: center;
   object-fit: fill;
-  top: -200px;
 }
+
+@media (max-width: 767px){
+  .Datepalms {
+    width: 90%;
+    height: 200px;
+    border-radius: 0;
+    margin-left: 25px;
+    margin-right: 0;
+    border-radius: 50%;
+  }
+  .Datepalms video  {
+    width: 120%;
+    height: 120%;
+    border-radius: 0;
+    object-fit: fill;
+    top: -20px;
+  }
+}
+
+/*-----------------------------------------------------------------------------*/
 
 .Dune::-webkit-scrollbar{
   display: none;
@@ -730,11 +772,13 @@ a:focus-visible {
   overflow:scroll;
   float: right;
   position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 200px;
+  margin-bottom: 200px;
   margin-right: 20px;
   display: flex;
 }
+
+/*-----------------------------------------------------------------------------*/
 
 .Bonsai::-webkit-scrollbar{
   display: none;
@@ -750,36 +794,31 @@ a:focus-visible {
   overflow:scroll;
   float: left;
   position: relative;
-  margin-top: 20px;
+  margin-top: 200px;
   margin-left: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 200px;
   display: flex;
 }
 
 .TheSkinI{
-  width: 1280px; 
-  height: 720px;
-  float: left;
-  position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 10vw;
-  margin-right: 10vw;
+  width: 60%; 
+  height: auto;
+  margin: auto;
+  position: relative; 
   z-index: 1;
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  object-fit: fill;
+  background-color: black;
 }
 
 .TheSkinI video{
   position: relative;
-  left: 0;
-  width: 1950px;
-  height: 1390px;
-  height: auto;
+  width: 100%;
+  height: 100%;
   justify-content: center;
   object-fit: fill;
-  top: -200px;
 }
 
 .Theskin::-webkit-scrollbar{
@@ -811,11 +850,11 @@ a:focus-visible {
     border-radius: 50%;
   }
   .TheSkinI video {
-    width: 100%;
-    height: 100%;
+    width: 120%;
+    height: 120%;
     border-radius: 0;
     object-fit: fill;
-    top: 3px;
+    top: -20px;
   }
 }
 
@@ -827,8 +866,8 @@ a:focus-visible {
   height: 30rem;
   background-color: #88888800;
   position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 200px;
+  margin-bottom: 200px;
   margin-left: 10px;
   z-index: 0;
 }
@@ -840,19 +879,98 @@ a:focus-visible {
   max-width: 100%;
 }
 
-@media (max-width: 767px){
+@media (max-width: 768px) {
   .Aworld {
     width: 100vw;
     float: left;
-    height: auto;
+    height: 120vh;
+    margin: 20px auto 20px 20px;
     position: relative;
+    right: 20px;
+  
   }
+
   .Aworld img {
     margin-top: 50px;
   }
 }
+/*----------------------------------------------------------------------------------------------*/
 
-/* ------------------------------------------------------------------------------------ */
+.Dunes{
+  width: 50%;
+  float: left;
+  height: 30rem;
+  background-color: #88888800;
+  position: relative;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  margin-left: 20px;
+  z-index: 0;
+}
+
+.Dunes img{
+  position: sticky;
+  top: 50px; /* set the top boundary */
+  bottom: 200px; /* set the bottom boundary */
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .Dunes {
+    width: 100vw;
+    float: left;
+    height: 120vh;
+    margin: 20px auto 20px 20px;
+    position: relative;
+    right: 20px;
+  
+  }
+
+  .Dunes img {
+    margin-top: 50px;
+  }
+}
+
+/*----------------------------------------------------------------------------------------------*/
+
+.Bladerunner{
+  width: 60%; 
+  height: auto;
+  margin: auto;
+  position: relative; 
+  z-index: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  object-fit: fill;
+  background-color: black;
+}
+
+.Bladerunner video{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  object-fit: fill;
+}
+
+@media (max-width: 767px){
+  .Bladerunner {
+    width: 90%;
+    height: auto;
+    border-radius: 0;
+    margin-left: 25px;
+    margin-right: 0;
+    border-radius: 50%;
+  }
+  .Bladerunner video {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    object-fit: fill;
+    top: 3px;
+  }
+}
 
 .Annihilation::-webkit-scrollbar{
   display: none;
@@ -868,11 +986,47 @@ a:focus-visible {
   overflow:scroll;
   float: left;
   position: relative;
-  margin-top: 20px;
+  margin-top: 200px;
   margin-bottom: 20px;
   display: flex;
 }
 
+.Annihilations{
+  width: 50%;
+  float: left;
+  height: 30rem;
+  background-color: #88888800;
+  position: relative;
+  margin-top: 200px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  z-index: 0;
+}
+
+.Annihilations img{
+  position: sticky;
+  top: 50px; /* set the top boundary */
+  bottom: 200px; /* set the bottom boundary */
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .Annihilations {
+    width: 100vw;
+    float: left;
+    height: 120vh;
+    margin: 20px auto 20px 20px;
+    position: relative;
+    right: 20px;
+  
+  }
+
+  .Annihilations img {
+    margin-top: 50px;
+  }
+}
+
+/*-------------------------------------------------------------------------------------*/
 .Searching::-webkit-scrollbar{
   display: none;
 }
@@ -892,74 +1046,6 @@ a:focus-visible {
   display: flex;
 }
 
-/*----------------------------------------------------------------------------------------------*/
-
-.Dunes{
-  width: 50%;
-  float: left;
-  height: 30rem;
-  background-color: #88888800;
-  position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 10px;
-  z-index: 0;
-}
-
-.Dunes img{
-  position: sticky;
-  top: 50px; /* set the top boundary */
-  bottom: 200px; /* set the bottom boundary */
-  max-width: 100%;
-}
-
-/*----------------------------------------------------------------------------------------------*/
-
-.Bladerunner{
-  width: 1280px; 
-  height: 720px;
-  float: left;
-  position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 10vw;
-  margin-right: 10vw;
-  z-index: 1;
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.Bladerunner video{
-  position: relative;
-  left: 0;
-  width: 1950px;
-  height: 1390px;
-  height: auto;
-  justify-content: center;
-  object-fit: fill;
-}
-
-.Annihilations{
-  width: 50%;
-  float: left;
-  height: 30rem;
-  background-color: #88888800;
-  position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 10px;
-  z-index: 0;
-}
-
-.Annihilations img{
-  position: sticky;
-  top: 50px; /* set the top boundary */
-  bottom: 200px; /* set the bottom boundary */
-  max-width: 100%;
-}
-
-/*-------------------------------------------------------------------------------------*/
 .Searchings{
   width: 50%;
   float: right;
@@ -1003,7 +1089,7 @@ a:focus-visible {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow:scroll;
-  float: left;
+  float: right;
   position: relative;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -1021,8 +1107,8 @@ a:focus-visible {
 
 
 @media (max-width: 767px){
-  .introduction, .Chapter1, .Chapter3, .HumanTree, .Chapter3, .Dune, .Pmon, .Pmon2, .Prometheus, .Forevergreens, .Bonsai,
-  .Pro, .Dunes, .Searchings, .Annihilations, .Searching, .Annihilation, .Theskin, .Searching2, .bib, .end, .image13, .Roots_forevergreens {
+  .introduction, .Chapter1, .Chapter3, .HumanTree, .Chapter3, .Dune, .Prometheus, .Forevergreens, .Bonsai,
+  .Pro, .Searchings, .Searching, .Annihilation, .Theskin, .Searching2, .bib, .end, .image13, .Roots_forevergreens {
     float: left; 
     width: 100vw;
     margin-bottom: 20px;
@@ -1030,64 +1116,12 @@ a:focus-visible {
     margin-left: 0;
     margin-right:0;
     height: 100%;
+    margin-top: 100px;
+    margin-bottom: 100px;
   }
 }
 
 
-
-@media (max-width: 767px){
-  .Prome {
-    width: 90%;
-    height: 200px;
-    border-radius: 0;
-    margin-left: 25px;
-    margin-right: 0;
-    border-radius: 50%;
-  }
-  .Prome video {
-    width: 100%;
-    height: 100%;
-    border-radius: 0;
-    object-fit: fill;
-    top: 3px;
-  }
-}
-
-@media (max-width: 767px){
-  .Datepalms {
-    width: 90%;
-    height: 200px;
-    border-radius: 0;
-    margin-left: 25px;
-    margin-right: 0;
-    border-radius: 50%;
-  }
-  .Datepalms video  {
-    width: 120%;
-    height: 120%;
-    border-radius: 0;
-    object-fit: fill;
-    top: -20px;
-  }
-}
-
-@media (max-width: 767px){
-  .Bladerunner {
-    width: 90%;
-    height: auto;
-    border-radius: 0;
-    margin-left: 25px;
-    margin-right: 0;
-    border-radius: 50%;
-  }
-  .Bladerunner video {
-    width: 100%;
-    height: 100%;
-    border-radius: 0;
-    object-fit: fill;
-    top: 3px;
-  }
-}
 
 
 h1{
@@ -1339,9 +1373,9 @@ span.link {
 }
 
 
-
-
-
+a {
+  color:rgb(17, 18, 90);
+}
 
 
 
